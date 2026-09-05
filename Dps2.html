@@ -1,0 +1,2844 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Daily Practice — Studio</title>
+<!-- iPad / iOS "Add to Home Screen" support: opens full-screen without Safari
+     chrome, and gets a real icon + name instead of a generic page snapshot. -->
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="Studio/Daily" />
+<meta name="theme-color" content="#1B1A17" />
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAN/klEQVR4nO3deXAUVR7A8V/PTDKTCxIwCUGScEm4Qi4KKBAxYCIgKniyoLvLFigI7lVehYUFuqJyBRFLPAB13V1q3RJ3BZGVUyAKJOROgJDEIMckkIOYkLm6e/+INRsmk+43M3287vl9/1Lq5eVBfeqlr+kwtw+MBwzzlkHtBWCUVjg5GnFgXiqcHA24c2A965IBiAPzyC0DEAfWve4yAHFg7jxkAOLAuuopAxAHBr3IAMSB9SYDEEeQJyADEEcwJywDEEfQJioDEEdwRiIDEEcQRigDEEewRS4DEEdQ5ZMMQBzBk68yAHEESX7IAMQRDPknAxCH7vNbBiAOfReIDEAcOi5AGYA49FrgMgBx6DJJZADi0F9SyQDEobMklAGIQ09JKwMQh26SXAYgDn0khwxAHDpIJhmAOLSefDIAcWg6WWUA4tBucssAxKHRFJABiEOLKSMDEIfmUkwGIA5tpaQMQBwaSmEZgDi0kvIyAHFoIlVkAOKgP7VkAOKgPBVlAOKgOXVlAOKgNtVlAOKgMxpkAOKgMEpkAOKgLXpkAOKgKqpkAOKgJ9pkAOKgJAplAOKgITplAOJQPWplAOJQN5plAOJQMcplAOJQK/plAOJQJU3IAMShfFqRAYhD4TQkAwBMai9AvKSkxPFZmaNGpQwbOiQuPq5/v35hYWGhoSEul8tms3V22mw22/WmJqu10Wq1Wq0NdT/WV1dfaGhoVHvhnmlLBgAw1P4u+/79+j3++MP3z5k9ZMhgP768ra3tfPWFioqqwjNFhYXFTU1NPn356ZPHoqIiRYfxPM9xPMexTqfT4XDa7Lb29o6O9o6W1taW5paGxsYrV60X63+qqa395g6XH38LdaMRR2RkxDPLnlq4YL7ZHCrVnPX1F9/b9uGX/95DOJ4QB3n8jWa2poKtLGALv+N/bpVwZvmi7sdKWlpq3sa3Bg5MkHba5OSklBEjpJ3Tp5i+/UyZU02ZU2HB79mKAufhL9nSH1RcD0l04cjOnrZ50zoJNwwaMxiNqRONqRO5+vOO3dvZ8lNqL6jXKDpbycxM37J5vc5ldMuQPMLyx7fMi1cyEVFqr8V7tOCIiorcvGldSEiI2gtROtOknLA1Ow3Jd6i9EC/RgmPF8qVxcbFqr0KdmOj+YS9sMaZPVnshnlGBIyYm+vHHHlF7FapmtlieeZU2H1QckM6ePdNiMYsOc7lchw8fPX7ih/PV1ZcvX2lv77DbbSEhIeHh4XGxsYmJg0aMGJ6aOjYzM71PFKU/xYUyGC1LV9s2PsdWl6q9lF+iAkf2tKmiY/Lzf1j58mprQ4PHn7Os3WazNze3nD13/tsDhwDAYDBkZabn5t6TkzN9QLyMV3E25W354MOd7v+1WCz5MxKZiCgmKtowZJRx+BjD0DFMZB8fZjSFmJe+0rl6MSUXQtTHwTBMenqa8JiS0rIlT69gWZZkQo7jThecOV1wZu0b69PTxz2xYP7MmTlGo1GKxQp1ItPCt1zjW64BAFt1xgkABqNp/LSQ3EcNg0cSTsL07W/+3Uu2t1+ScaHEqY8jNva2yMgI4TFbt24jlNE9nueLikqKikrWb9j8xBPz29s7/F2jeN7vm3Cs69Qh16lDxvQp5kUvEp6yGlMnGtOnsMUnpF2hH6l/QEpyklJUXBLIt7A2NGzY+Pa29z8KZBKBRO+oscUnOtcs5mqrCCcMfWwZMEygywo49XGEhYWJjunstCmwEv8ivNfKNzfa8p7nrBdJBhvibjdl3BnQsqRIfRwul/jtypQUNW+LCOTTXXi+s8P+zsv8zZ9JBpumz/NzTdKlPo7W1huiY1Ysf5qhYJv1aEWS+J7nEddwyfnVpyQjjSnpTJ8Y3xclZerjaGpqFh0zPXvals3r4+PjFFiP3DmPfkV0psowxvQpsq9GMPVxtLW1XfzpkuiwnJwZB7/dm7fprVkzc/v27avAwuTKYXce3E0y0Dg8Ve61CKf+qSwAnDx5OilxkOgwk8k0a2burJm5PM/X1NSWlVWUV1ZVVFSePXveZqP3iLVnbMUpmLtIdJhh2GgFFiMQFTj27dv/6CM+HH8xDDN8+LDhw4fNm/cAALAsV1dXV1pWXlxcevJUQX090RmBinH15/nOm0xYuPAwQ9ztYDQBq9rzhVTgyP/+ZGlZ+bjUsf59udFo6LLy0LwHAeDKlasHDh7+et/+4mJablJ4xnFcXaVx9HiRYQzD9Ivlr11VZE1eUv+Yo6v16/NYlpNkqoEDE3795IJdf/9k754vHnv0ITqfEeFviB+GA4AhWs3HGGjBcbrgzKa8LdLOOWzokFfXrNq754u7CW7sKRzf3kY0zmyReSFC0YIDALbv+OT9D7ZLPm1S4qBt721Z9fKLRiNFf1m+gwgHox6OrPxWiv69ACBv89bnXlh58+ZNyWdeuHD+639ZI/m0/kd4TY/nZV6HUHThAIA9e/bl3PvA5//azXHSHIK4m/vgnEWLnpR2Tr9jIoku1fAOu9wr8VpWfitQiAMAmpqaVr3y6qz75m3f8Ymvn1QT7k9/WEHJZVYmguwhIHunzAvxUpcMoBNHV/X1F9dv2Dwte+aSp5bv/PivZ8+d5wPeY0NDQ59aLH71CQAiTfLeymGi+5MM41quybqMnrllACXXOQRyuVzHjucfO54PADEx0Wlp49LGjU0blzo2dYx/D4rOnXv/2jc3CD86JPsnno0m41CCq58cxzcriqO7DKAfR/daWlqPHPnuyJHvAIBhmKFDBk+YMH7SpAlT75wcHi5ytdFdRETE2DGjS0rLehugwGfhjYNTIFT8gWqu8TJwPj//5nceMkBbOLrH83xNbV1Nbd0/dn1uNofm5tyzZPFvR4wg+mhQVlZGbziUeUuCMXUiyTCutlLulQhH7zEHeXa746s9X897+Fef/W0XyfjejkmVkcFYwk3Zc0lGstW9bm+S13PbAH3g6Ipl2dfXrisrrxAdGR0d3fMPFXuziil7LtGTxjyv2DPGXmWAnnAAAM/zJG/g6Pmwu3K/43lgcsh9C0lGsueKlfn0Sm8yQGc4AOAiwf16u/2WK0uKyWAioszPrmUsRMfOrkNEDwQFmIAMoATHpo1vzph+tyRTRUSIfAQGANp/bnf/t3Iybkuw/HmDIXYgyWCu8bKr6LjcSxKNirOVUSNTZs+6t7Lq7I6dn+7b918/Pr/kbtKkCaJjLl/55QkJ5Y4zsu4K/c3zTDjpe6Qc/3xPgbsqwtsGULJzdDV61MgN69YePLB3xfKlCQkD/Jth3twHRIfV1NSCMjIMRtPEGWGrPjAvW0Mugy07qcChqKgMoGTn6N6A+PgVy59+ZtmSM0XF+/cfOHr0GMnjxwCQkzPj9ddeIXkxUFFxqSwyQs1MeCQTHsX0iTEMGWW8Y6xh2Fhf39rD32iy73hT+rXdGokMoORtgvv27hZ4n+TVq9bCwqKqs+cuXKi5ctV67dq1zs5Op9NlNpujo/sOTk7KyEi7NzcnJYXoClhpWfmwt58VHRb+zh4mTPzwReJcTgVewUAoAyjcOXqWkDBgzpxZc+bMkmS2kaUHnJJMJHkca9u2mh4ZoAkcEsa3tThPfKP2Krxlt9k+fI0tzld7HbcUXDgcu94FlR6fEYhvuW7bupKrr5b7G/m0bUBQ4XAd+9p16qDaq/DMlb/fsetdwk9XB5KvMiB4cLgKjtg/y1N7FbfE1VY5dn/EVp1R4Hv5IQMowZH//cn4+DjyZzJ8i+Ocez9z/OdjdR/W/X8uF1t+ynl4N1tRoMw39E8GUHIqCwBmc+idUybn5t6TnX2XhO8CZCsLHJ+/z/10wdcvlPxUlm+5zl4oZytPs4XHFPgh0j3N43BnMpnGjBmVlZmRlZWRmZEeExPtxyRXrdaDB488XP0td6nWv2X4gIPngWOBZXmnAxw23nYTOjv49ht8Wyvfep1rauAbL3FX6tV6QaDfMoBCHB4lJQ4aPDg5OTkpOTkpKSkxNva2iPCuwiwWC8dxDoejvb2juaXFam2or7947lx1cUlJbe2PmvvNN3IUiAygH4d/oQwIWAZQdeNNqlAGSCED9IcDZYBEMkBnOFCGtOkHB8roSqptA3SDA2V0JaEM0AcOlNGVtDJABzhQRleSywCt40AZsqZhHCjDnRzbBmgXB8pwJ5MM0CgOlOFOPhmgRRwow52sMkBzOFCGO7llgLZwoAyF0wwOlNE9BbYN0AoOlNE9ZWSAJnCgjO4pJgPox4EyuqekDKAcB8pQN3pxoAyPFN42gFocKMMj5WUAnThQhkeqyAAKcaAMj9SSAbThQBkeqSgDqMKBMmiLFhwoo2fqbhtACQ6U0TPVZQANOFBGz2iQAarjQBk9o0QGqIsDZVCeajhQhtfo2TZALRwow2tUyQBVcKAMr9EmA5THgTK8RqEMUBgHyvAanTJASRwoQ3MphANl9Ba12wYogwNl9BbNMkABHCijtyiXAXLjQBm9Rb8MkBUHytB6cuFAGQJpYtsAmXCgDIG0IgPkwIEyBNKQDJAcB8oQSFsyQFocKEMgzckACXGgDP0lDQ6UIZwWtw2QBAfKEE6jMiBwHChDOO3KgABxoAzhNC0DAsGBMnSfnzhQhmha3zbAPxwoQzQdyAA/cKAM0fQhA3zFgTJE040M8AkHyhBNTzKAHAfKCMKIcKAMknS2bQAJDpRBkv5kgCgOlEGSLmWAMA6UQZJeZYAADpSBeceBMgjT8bYBXnGgDML0LQN64kAZhOleBnjgQBmEBYMM6I4DZRAWJDLAjQNlYD0zAMrwpeDZNgDgf/Gl3AG6CtUYAAAAAElFTkSuQmCC" />
+<link rel="icon" href="data:image/png;base64,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" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Work+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EDEAE0;
+    --card:#FAF8F2;
+    --card-2:#F2EEE2;
+    --ink:#1B1A17;
+    --ink-soft:#4A473E;
+    --muted:#8C8575;
+    --line:#D9D3C1;
+    --blue:#2E4BD6;
+    --blue-soft:#E4E8FB;
+    --orange:#E85427;
+    --orange-soft:#FCE7DE;
+    --magenta:#C22E82;
+    --magenta-soft:#F8DEEE;
+    --green:#2F7A4F;
+    --green-soft:#DDEEE2;
+    --teal:#1B7A72;
+    --teal-soft:#DCEEEC;
+    --mustard:#A9781A;
+    --mustard-soft:#F1E6CE;
+    --shadow: 4px 4px 0 rgba(27,26,23,0.08);
+    --radius: 3px;
+  }
+  [data-theme="dark"]{
+    --paper:#181713;
+    --card:#211F1A;
+    --card-2:#28251F;
+    --ink:#F3F0E6;
+    --ink-soft:#D3CDBC;
+    --muted:#8F8975;
+    --line:#3A362C;
+    --blue:#7C8FEF;
+    --blue-soft:#232A4A;
+    --orange:#FF8A5C;
+    --orange-soft:#3E2519;
+    --magenta:#EF7CC0;
+    --magenta-soft:#3E2233;
+    --green:#7FC79A;
+    --green-soft:#20332A;
+    --teal:#5FC2B8;
+    --teal-soft:#1B302D;
+    --mustard:#D9AD4F;
+    --mustard-soft:#332A16;
+    --shadow: 4px 4px 0 rgba(0,0,0,0.35);
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Work Sans', sans-serif;
+    -webkit-font-smoothing:antialiased;
+    min-height:100vh;
+  }
+  h1,h2,h3,h4,.display{
+    font-family:'Space Grotesk', sans-serif;
+    letter-spacing:-0.01em;
+    margin:0;
+  }
+  button{font-family:inherit;}
+  a{color:inherit;}
+  .wrap{max-width:920px;margin:0 auto;padding:0 20px calc(80px + env(safe-area-inset-bottom));}
+  /* ---------- Top bar ---------- */
+  .topbar{
+    border-bottom:2px solid var(--ink);
+    background:var(--paper);
+    position:sticky;top:0;z-index:20;
+    padding-top:env(safe-area-inset-top);
+  }
+  .topbar-inner{
+    max-width:920px;margin:0 auto;padding:16px 20px;
+    display:flex;align-items:center;justify-content:space-between;gap:16px;
+  }
+  .wordmark{
+    font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:20px;
+    display:flex;align-items:baseline;gap:6px;
+  }
+  .wordmark .slash{color:var(--orange);}
+  .daybadge{
+    display:flex;align-items:center;gap:8px;
+    font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:13px;
+    border:1.5px solid var(--ink);border-radius:100px;padding:5px 12px 5px 8px;
+  }
+  .daybadge .dot{width:8px;height:8px;border-radius:50%;background:var(--orange);}
+  .nav{display:flex;gap:2px;overflow-x:auto;}
+  .nav button{
+    background:none;border:none;padding:11px 14px;font-size:13.5px;font-weight:600;
+    color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap;
+    min-height:44px;-webkit-tap-highlight-color:transparent;touch-action:manipulation;
+  }
+  .nav button.active{color:var(--ink);border-bottom:2px solid var(--ink);}
+  .theme-toggle{
+    border:1.5px solid var(--ink);background:none;color:var(--ink);
+    width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:15px;
+    display:flex;align-items:center;justify-content:center;flex-shrink:0;
+    -webkit-tap-highlight-color:transparent;touch-action:manipulation;
+  }
+  .topbar-row2{
+    max-width:920px;margin:0 auto;padding:0 20px 10px;
+    display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;
+  }
+
+  /* ---------- generic ---------- */
+  .card{
+    background:var(--card);border:1.5px solid var(--ink);border-radius:var(--radius);
+    box-shadow:var(--shadow);
+  }
+  .muted{color:var(--muted);}
+  .tag{
+    display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:600;
+    padding:3px 9px;border-radius:100px;border:1px solid var(--line);
+  }
+  .btn{
+    font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:14px;
+    padding:11px 20px;border-radius:100px;border:1.5px solid var(--ink);
+    cursor:pointer;background:none;color:var(--ink);transition:transform .08s ease;
+    min-height:44px;-webkit-tap-highlight-color:transparent;touch-action:manipulation;
+  }
+  .btn:active{transform:scale(0.97);}
+  .btn-primary{background:var(--ink);color:var(--paper);}
+  .btn-ghost{border-color:var(--line);color:var(--ink-soft);}
+  .btn-sm{padding:9px 16px;font-size:13px;min-height:38px;}
+  .btn-block{width:100%;}
+  .row{display:flex;gap:10px;flex-wrap:wrap;}
+  .section-title{
+    font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:13px;
+    text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);margin-bottom:10px;
+  }
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+  @media(max-width:640px){.grid-2,.grid-3{grid-template-columns:1fr 1fr;}}
+  @media(max-width:480px){.grid-2{grid-template-columns:1fr;}}
+  @media(max-width:420px){.grid-3{grid-template-columns:1fr;}}
+
+  /* ---------- mission hero ---------- */
+  .mission-shell{position:relative;margin-top:26px;}
+  .mission-shell::before{
+    content:"";position:absolute;inset:0;
+    transform:translate(8px,8px);
+    background:var(--accent, var(--orange));
+    border:1.5px solid var(--ink);border-radius:var(--radius);
+    z-index:0;
+  }
+  .mission-card{
+    position:relative;z-index:1;padding:26px 26px 22px;
+  }
+  .mission-eyebrow{
+    display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;
+  }
+  .mission-kicker{
+    font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:12px;
+    text-transform:uppercase;letter-spacing:.08em;color:var(--accent,var(--orange));
+  }
+  .mission-title{font-size:30px;font-weight:700;line-height:1.1;margin:2px 0 10px;}
+  .mission-desc{font-size:15px;line-height:1.55;color:var(--ink-soft);margin-bottom:16px;max-width:64ch;}
+  .mission-meta{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:20px;}
+  .meta-item{font-size:13px;}
+  .meta-item .k{color:var(--muted);display:block;font-size:11px;text-transform:uppercase;letter-spacing:.05em;margin-bottom:3px;}
+  .diff-dots{display:flex;gap:4px;margin-top:2px;}
+  .diff-dots span{width:7px;height:7px;border-radius:50%;background:var(--line);}
+  .diff-dots span.on{background:var(--ink);}
+  .mission-actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center;}
+  .min-toggle{
+    display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted);
+    margin-top:14px;cursor:pointer;user-select:none;padding:6px 0;
+    -webkit-tap-highlight-color:transparent;
+  }
+  .min-toggle input{accent-color:var(--ink);width:19px;height:19px;flex-shrink:0;}
+  .recovery-banner{
+    background:var(--green-soft);border:1.5px solid var(--green);border-radius:var(--radius);
+    padding:12px 16px;margin-top:22px;font-size:13.5px;color:var(--ink);
+  }
+  .recovery-banner b{display:block;font-family:'Space Grotesk',sans-serif;margin-bottom:2px;}
+
+  /* extra + bored */
+  .extras-row{display:flex;gap:12px;margin-top:22px;flex-wrap:wrap;}
+  .extra-btn{
+    flex:1;min-width:220px;
+    border:1.5px dashed var(--line);border-radius:var(--radius);padding:16px;
+    background:var(--card-2);cursor:pointer;text-align:left;
+  }
+  .extra-btn .t{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:14.5px;margin-bottom:3px;}
+  .extra-btn .d{font-size:12.5px;color:var(--muted);}
+  .choice-pop{
+    margin-top:14px;padding:16px;border:1.5px solid var(--ink);border-radius:var(--radius);
+    background:var(--card);
+  }
+  .choice-grid{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;}
+  .extra-mission-card{
+    margin-top:14px;padding:16px;border-left:4px solid var(--accent,var(--blue));
+    background:var(--card-2);border-radius:var(--radius);
+  }
+
+  /* stats */
+  .stat{padding:16px;}
+  .stat .n{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:26px;}
+  .stat .l{font-size:12px;color:var(--muted);margin-top:2px;}
+
+  /* skills */
+  .skill-cat{margin-bottom:26px;}
+  .skill-cat-head{display:flex;align-items:center;gap:8px;margin-bottom:12px;}
+  .cat-swatch{width:10px;height:10px;border-radius:2px;}
+  .skill-row{display:flex;align-items:center;gap:12px;padding:9px 0;border-bottom:1px solid var(--line);}
+  .skill-row:last-child{border-bottom:none;}
+  .skill-name{flex:0 0 170px;font-size:13.5px;font-weight:500;}
+  @media(max-width:380px){ .skill-name{flex-basis:110px;} }
+  .skill-bar-track{flex:1;height:8px;background:var(--line);border-radius:4px;overflow:hidden;}
+  .skill-bar-fill{height:100%;border-radius:4px;}
+  .skill-lvl{flex:0 0 46px;text-align:right;font-size:12px;color:var(--muted);font-weight:600;}
+
+  /* history */
+  .hist-item{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--line);align-items:flex-start;}
+  .hist-item:last-child{border-bottom:none;}
+  .hist-date{flex:0 0 74px;font-size:11.5px;color:var(--muted);font-family:'Space Grotesk',sans-serif;padding-top:2px;}
+  .hist-body{flex:1;}
+  .hist-title{font-weight:600;font-size:14.5px;margin-bottom:3px;}
+  .status-pill{font-size:11px;padding:2px 8px;border-radius:100px;font-weight:600;}
+  .status-completed{background:var(--green-soft);color:var(--green);}
+  .status-abandoned{background:var(--orange-soft);color:var(--orange);}
+  .status-extra{background:var(--blue-soft);color:var(--blue);}
+  .hist-thumb{width:48px;height:48px;object-fit:cover;border-radius:4px;border:1px solid var(--line);}
+
+  /* projects */
+  .project-card{padding:20px;margin-bottom:16px;}
+  .project-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px;}
+  .proj-progress-track{height:6px;background:var(--line);border-radius:3px;overflow:hidden;margin:10px 0 14px;}
+  .proj-progress-fill{height:100%;background:var(--orange);}
+  .task-list{display:flex;flex-direction:column;gap:6px;}
+  .task-row{display:flex;align-items:center;gap:10px;font-size:13.5px;padding:6px 0;}
+  .task-row input{width:16px;height:16px;accent-color:var(--ink);}
+  .task-row.done label{text-decoration:line-through;color:var(--muted);}
+
+  /* modal */
+  .overlay{
+    position:fixed;inset:0;background:rgba(20,18,14,0.55);
+    display:flex;align-items:center;justify-content:center;z-index:100;padding:16px;
+  }
+  .modal{
+    background:var(--card);border:1.5px solid var(--ink);border-radius:var(--radius);
+    width:100%;max-width:420px;padding:24px;box-shadow:var(--shadow);
+  }
+  .modal h3{font-size:19px;margin-bottom:14px;}
+  .modal .row{margin-top:14px;}
+  .chip{
+    border:1.5px solid var(--line);border-radius:100px;padding:10px 16px;font-size:13.5px;
+    cursor:pointer;background:none;color:var(--ink);min-height:40px;
+    -webkit-tap-highlight-color:transparent;touch-action:manipulation;
+  }
+  .chip.selected{border-color:var(--ink);background:var(--ink);color:var(--paper);}
+  textarea, input[type=text]{
+    width:100%;border:1.5px solid var(--line);border-radius:var(--radius);padding:10px 12px;
+    font-family:inherit;font-size:16px;background:var(--paper);color:var(--ink);resize:vertical;
+  }
+  .file-row{margin-top:14px;font-size:12.5px;color:var(--muted);}
+  .modal-actions{display:flex;justify-content:flex-end;gap:10px;margin-top:20px;}
+  .close-x{
+    position:absolute;top:10px;right:10px;background:none;border:none;font-size:16px;
+    cursor:pointer;color:var(--muted);width:36px;height:36px;display:flex;align-items:center;
+    justify-content:center;-webkit-tap-highlight-color:transparent;touch-action:manipulation;
+  }
+
+  .toast{
+    position:fixed;bottom:22px;left:50%;transform:translateX(-50%);
+    background:var(--ink);color:var(--paper);padding:12px 20px;border-radius:100px;
+    font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:13.5px;z-index:200;
+    box-shadow:0 6px 20px rgba(0,0,0,0.25);
+  }
+  .empty{padding:40px 20px;text-align:center;color:var(--muted);font-size:13.5px;}
+  .loading{padding:80px 20px;text-align:center;color:var(--muted);}
+
+  .month-strip{display:flex;gap:4px;margin-top:14px;flex-wrap:wrap;}
+  .day-cell{width:16px;height:16px;border-radius:3px;background:var(--line);}
+  .day-cell.hit{background:var(--green);}
+
+  /* ---------- rich mission content ---------- */
+  .m-block{margin-top:18px;}
+  .m-block-label{
+    font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:11.5px;
+    text-transform:uppercase;letter-spacing:.07em;color:var(--accent,var(--muted));margin-bottom:8px;
+  }
+  .m-goal{font-size:13.5px;color:var(--ink-soft);font-style:italic;margin-bottom:2px;}
+  .constraint-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;}
+  .constraint-list li{font-size:13.5px;padding-left:16px;position:relative;line-height:1.5;}
+  .constraint-list li::before{content:"—";position:absolute;left:0;color:var(--accent,var(--orange));}
+  .direction-text{font-size:13.5px;line-height:1.6;color:var(--ink-soft);}
+  details.m-details{margin-top:14px;border-top:1px solid var(--line);padding-top:12px;}
+  details.m-details summary{
+    cursor:pointer;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:12.5px;
+    text-transform:uppercase;letter-spacing:.06em;color:var(--muted);list-style:none;
+    display:flex;align-items:center;gap:6px;
+  }
+  details.m-details summary::-webkit-details-marker{display:none;}
+  details.m-details summary::before{content:"▸";font-size:11px;transition:transform .15s;}
+  details.m-details[open] summary::before{transform:rotate(90deg);}
+  details.m-details .inner{padding-top:12px;font-size:13.5px;}
+  .process-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;}
+  .process-list li{display:flex;justify-content:space-between;gap:10px;font-size:13.5px;border-bottom:1px dotted var(--line);padding-bottom:6px;}
+  .process-list li:last-child{border-bottom:none;}
+  .process-list .pt{color:var(--muted);font-size:12px;white-space:nowrap;font-family:'Space Grotesk',sans-serif;}
+  .ref-chips{display:flex;flex-wrap:wrap;gap:6px;}
+  .ref-chip{font-size:12px;border:1px solid var(--line);border-radius:100px;padding:4px 10px;color:var(--ink-soft);}
+  .approach-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:5px;}
+  .approach-list li{font-size:13px;color:var(--ink-soft);padding-left:14px;position:relative;}
+  .approach-list li::before{content:"·";position:absolute;left:0;color:var(--accent,var(--orange));font-weight:700;}
+  .extra-callout{
+    margin-top:16px;padding:12px 14px;border-radius:var(--radius);
+    background:var(--accent-soft, var(--orange-soft));border:1px solid var(--line);font-size:13px;
+  }
+  .extra-callout b{display:block;font-family:'Space Grotesk',sans-serif;font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px;color:var(--accent,var(--orange));}
+  .reflect-q{font-size:13px;color:var(--ink-soft);margin-bottom:8px;font-style:italic;}
+
+  /* ---------- work-choice / skill-focus ---------- */
+  .choice-cards{display:flex;gap:14px;flex-wrap:wrap;margin-top:18px;}
+  .choice-card{
+    flex:1;min-width:220px;border:1.5px solid var(--ink);border-radius:var(--radius);
+    background:var(--card);padding:20px;cursor:pointer;text-align:left;box-shadow:var(--shadow);
+  }
+  .choice-card h3{font-size:16px;margin-bottom:6px;}
+  .choice-card p{font-size:12.5px;color:var(--muted);}
+  .time-chip-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px;}
+
+  /* ---------- history detail / thumbs ---------- */
+  .hist-item{cursor:pointer;}
+  .hist-thumb-lg{max-width:100%;border-radius:4px;border:1px solid var(--line);margin-top:10px;}
+
+  /* ---------- project brief ---------- */
+  .proj-meta-row{display:flex;gap:16px;flex-wrap:wrap;margin:10px 0 4px;}
+  .proj-meta-row span{font-size:12.5px;color:var(--muted);}
+  .proj-meta-row b{color:var(--ink);font-weight:600;}
+  .milestone-list{display:flex;flex-direction:column;gap:8px;margin-top:10px;}
+  .milestone-row{
+    display:flex;align-items:center;gap:10px;padding:10px 12px;border:1px solid var(--line);
+    border-radius:var(--radius);cursor:pointer;background:var(--card-2);
+  }
+  .milestone-row.done{opacity:0.65;}
+  .milestone-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;background:var(--line);}
+  .milestone-dot.active{background:var(--orange);}
+  .milestone-dot.done{background:var(--green);}
+  .milestone-label{flex:1;font-size:13.5px;font-weight:500;}
+  .milestone-pct{font-size:12px;color:var(--muted);font-family:'Space Grotesk',sans-serif;}
+  .journal-entry{border-left:2px solid var(--line);padding:4px 0 14px 14px;margin-left:4px;}
+  .journal-entry .je-head{display:flex;gap:8px;align-items:center;margin-bottom:4px;}
+  .journal-cat{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--accent,var(--orange));}
+  .journal-date{font-size:11.5px;color:var(--muted);}
+  .journal-notes{font-size:13.5px;color:var(--ink-soft);white-space:pre-wrap;}
+  .je-form textarea{margin-top:8px;}
+  .project-detail{margin-top:10px;}
+  .btn-start-project{
+    border:1.5px dashed var(--ink);background:var(--card-2);border-radius:var(--radius);
+    padding:16px;text-align:left;cursor:pointer;width:100%;margin-top:10px;
+  }
+  .modal-wide{max-width:640px;max-height:86vh;overflow-y:auto;}
+  .modal-meta-strip{display:flex;gap:16px;flex-wrap:wrap;margin:6px 0 16px;font-size:12.5px;color:var(--muted);}
+  .modal-meta-strip b{color:var(--ink);}
+  .storage-banner{
+    background:var(--mustard-soft);border-bottom:1.5px solid var(--mustard);
+    color:var(--ink);font-size:12.5px;line-height:1.5;padding:10px 44px 10px 16px;
+    position:relative;padding-top:calc(10px + env(safe-area-inset-top));
+  }
+  .storage-banner button{
+    position:absolute;top:6px;right:6px;background:none;border:none;font-size:15px;
+    cursor:pointer;color:var(--ink);width:34px;height:34px;
+  }
+</style>
+</head>
+<body>
+<div id="app"><div class="loading">Loading studio…</div></div>
+
+<script>
+
+
+
+
+(function(){
+
+/* ===================== STORAGE LAYER ===================== */
+/* Small async-shaped store so this can be swapped for a real backend
+   later without touching any app logic. Backed by localStorage for now. */
+const Store = {
+  async get(key){
+    try{
+      const raw = window.localStorage.getItem(key);
+      return raw === null ? null : raw;
+    }catch(e){ return null; }
+  },
+  async set(key, value){
+    try{ window.localStorage.setItem(key, value); return true; }
+    catch(e){ return false; }
+  }
+};
+
+/* ===================== DATA: SKILLS ===================== */
+
+/* Rendering/accent buckets. "group" (used by the Skills view) can be more
+   specific than the accent bucket a skill actually paints its mission card
+   with — music/street share accents with pd/il to avoid a huge palette. */
+const CATS = {
+  gd:{label:"Graphic Design", color:"var(--blue)", soft:"var(--blue-soft)"},
+  il:{label:"Illustration", color:"var(--magenta)", soft:"var(--magenta-soft)"},
+  pd:{label:"Poster Design", color:"var(--orange)", soft:"var(--orange-soft)"},
+  color:{label:"Color", color:"var(--green)", soft:"var(--green-soft)"},
+  vector:{label:"Vector / Graphic Illustration", color:"var(--teal)", soft:"var(--teal-soft)"},
+  identity:{label:"Visual Identity", color:"var(--mustard)", soft:"var(--mustard-soft)"},
+  music:{label:"Music Artwork", color:"var(--orange)", soft:"var(--orange-soft)"},
+  street:{label:"Street / Urban", color:"var(--magenta)", soft:"var(--magenta-soft)"}
+};
+/* order the Skills view groups appear in */
+const SKILL_GROUP_ORDER = ["il","gd","pd","color","vector","identity","music","street"];
+
+const SKILL_DEFS = [
+  // Graphic Design
+  ["gd_composition","Composition","gd"],["gd_hierarchy","Visual hierarchy","gd"],
+  ["gd_layout","Layout","gd"],["gd_grids","Grids","gd"],["gd_negspace","Negative space","gd"],
+  ["gd_typography","Typography","gd"],["gd_lettering","Lettering","gd"],["gd_contrast","Contrast","gd"],
+  ["gd_scale","Scale","gd"],["gd_rhythm","Rhythm","gd"],
+  ["gd_branding","Branding","gd"],["gd_identity","Visual identity","gd"],
+  // Illustration
+  ["il_shape","Shape language","il"],["il_line","Line art","il"],["il_lineweight","Line weight","il"],
+  ["il_form","Form","il"],["il_gesture","Gesture","il"],["il_perspective","Perspective","il"],
+  ["il_anatomy","Anatomy","il"],["il_foreshortening","Foreshortening","il"],["il_proportion","Proportion","il"],
+  ["il_lighting","Lighting","il"],["il_value","Value","il"],["il_texture","Texture","il"],
+  ["il_rendering","Rendering","il"],["il_silhouette","Silhouette","il"],
+  ["il_character","Character design","il"],["il_cartoon","Cartoon / stylization","il"],
+  ["il_environment","Environment","il"],["il_style","Style development","il"],
+  ["il_storytelling","Visual storytelling","il"],
+  // Color
+  ["color_theory","Color theory","color"],["color_harmony","Color harmony","color"],
+  ["color_composition","Color composition","color"],["color_limited","Limited palettes","color"],
+  ["color_mood","Mood","color"],["color_focal","Focal color","color"],
+  // Poster Design
+  ["pd_concept","Concept","pd"],["pd_composition","Composition","pd"],["pd_typography","Typography","pd"],
+  ["pd_imagetype","Image + type","pd"],["pd_color","Color","pd"],["pd_hierarchy","Visual hierarchy","pd"],
+  ["pd_experimental","Experimental layouts","pd"],["pd_conceptdev","Concept development","pd"],
+  // Vector / Graphic Illustration
+  ["vec_geometric","Geometric shapes","vector"],["vec_simplify","Simplification","vector"],
+  ["vec_flatcolor","Flat colors","vector"],["vec_character","Graphic characters","vector"],
+  ["vec_icon","Icons","vector"],
+  // Visual Identity
+  ["id_logo","Logo","identity"],["id_symbol","Symbol","identity"],["id_system","Brand system","identity"],
+  ["id_typesystem","Typography system","identity"],["id_colorsystem","Color system","identity"],
+  ["id_applications","Applications","identity"],
+  // Music Artwork
+  ["music_albums","Album covers","music"],["music_singles","Single/EP artwork","music"],
+  ["music_branding","Artist branding","music"],["music_posters","Music posters","music"],
+  // Street / Urban
+  ["street_wear","Streetwear graphics","street"],["street_skate","Skate graphics","street"],
+  ["street_graffiti","Graffiti-inspired graphics","street"],["street_env","Urban environments","street"],
+  ["street_contemporary","Contemporary graphic design","street"]
+];
+
+/* ===================== DIFFICULTY LADDERS ===================== */
+/* index 1 = base (no addition). Each higher level ADDS one constraint
+   on top of everything below it. Used by the "Harder" extra-mission flow. */
+const LADDERS = {
+  poster: {
+    2: "Use only 1 typeface throughout",
+    3: "Work within a strict underlying grid — align everything to it",
+    4: "Keep the grid, but intentionally break it in exactly one controlled area",
+    5: "Build hierarchy entirely through scale and spacing — no color or weight changes allowed to signal importance"
+  },
+  illustration: {
+    2: "Limit yourself to a 2-color palette, plus black/white",
+    3: "No outlines — build the form using value and shape only",
+    4: "Draw it as a single continuous line, unbroken",
+    5: "Express motion or emotion without any literal facial expression or text"
+  },
+  vector: {
+    2: "Limit to exactly 3 flat colors, no gradients or textures",
+    3: "Build every shape from a strict underlying grid of circles and squares",
+    4: "Reduce the piece to the fewest shapes that still read clearly",
+    5: "The design must still work as a single-color silhouette with all color stripped out"
+  }
+};
+
+/* ===================== MISSION ARCHETYPES ===================== */
+/* Each archetype is a rich template. Variants swap in a concrete subject
+   and creative context so one archetype yields several non-interchangeable
+   missions. buildConcreteMission() interpolates + applies the ladder level. */
+
+const ARCHETYPES = [
+{
+  id:"two_color_event_poster", family:"pd", ladder:"poster", taskType:"create",
+  primary:"pd_color", secondary:["pd_composition","gd_contrast"], diff:2, time:60, minTime:20,
+  goal:"Practice visual hierarchy and color restraint.",
+  variants:[
+    {subject:"an underground techno night called NOCTURNE", ctx:"music event poster"},
+    {subject:"a black-and-white film retrospective called SILVER SCREENINGS", ctx:"film series poster"}
+  ],
+  titleFn:v=>`Design a Poster for ${v.subject}`,
+  scenarioFn:v=>`You're designing a poster for ${v.subject}. It has to work as one printed sheet, pinned to a wall among a dozen other posters — it gets about two seconds to earn a second look.`,
+  deliverable:"One finished poster, A3 portrait, containing the name, a date, a location, and one line of supporting information. The main name must be the dominant element.",
+  baseConstraints:["Canvas: A3 portrait","Use exactly 2 colors, plus black or white if needed","Create at least 3 thumbnail layout variations before choosing one"],
+  direction:"Start by making the name absurdly large — bigger than feels reasonable. Use scale and spacing to build hierarchy rather than decoration or color. Try placing the secondary information somewhere unexpected instead of centered at the bottom.",
+  process:[["Sketch 3 thumbnail compositions",10],["Pick the strongest one",5],["Develop typography and hierarchy",20],["Refine spacing and alignment",15],["Final cleanup",10]],
+  references:["Josef Müller-Brockmann","Swiss Style / International Typographic Style","contemporary gig poster design"],
+  approaches:["An extremely minimal Swiss-style composition","A dense, editorial composition packed with detail","An image-heavy, cinematic composition"],
+  focus:["visual hierarchy","restraint","scale as a hierarchy tool"],
+  extraChallenge:"Make a second version where hierarchy is achieved without changing font size at all.",
+  reflection:"Where did the eye land first — was that the element you intended?"
+},
+{
+  id:"type_hierarchy_stack", family:"gd", ladder:"poster", taskType:"practice",
+  primary:"gd_typography", secondary:["gd_hierarchy"], diff:2, time:30, minTime:12,
+  goal:"Train pure typographic hierarchy with no color or imagery to lean on.",
+  variants:[
+    {subject:"a five-band festival lineup: headliner, three support acts, and a DJ set", ctx:"lineup flyer info stack"},
+    {subject:"a book cover's title, author name, and one review pull-quote", ctx:"book cover title block"}
+  ],
+  titleFn:v=>`Build the Typographic Stack for ${v.ctx}`,
+  scenarioFn:v=>`You need to lay out ${v.subject} using type alone. No image, no color — the reader should still know instantly what matters most.`,
+  deliverable:"Three distinct hierarchy studies of the same text block, using only size, weight, and spacing to differentiate levels of importance.",
+  baseConstraints:["Black text on white only — no color","One typeface family (weights/sizes allowed)","Each of the 3 studies must use a different hierarchy strategy"],
+  direction:"Pick one variable at a time — first solve it with size alone, then with weight alone, then with spacing/position alone. Compare which reads fastest.",
+  process:[["List the text elements in true priority order",5],["Hierarchy study 1: size only",10],["Hierarchy study 2: weight only",8],["Hierarchy study 3: spacing/position only",8]],
+  references:["editorial masthead design","type specimen posters","Vignelli's type discipline"],
+  approaches:["A tightly packed information-dense block","A generously spaced, airy stack","An asymmetric stack with one oversized anchor word"],
+  focus:["hierarchy","typographic contrast","information order"],
+  extraChallenge:"Combine your favorite two studies into one final version.",
+  reflection:"Which single variable (size, weight, or spacing) did the most work for the least effort?"
+},
+{
+  id:"recreate_swiss_classic", family:"pd", ladder:"poster", taskType:"recreate",
+  primary:"pd_composition", secondary:["pd_typography"], diff:3, time:75, minTime:25,
+  goal:"Reverse-engineer how a strong poster actually achieves its balance.",
+  variants:[
+    {subject:"a Swiss International Typographic Style poster you admire", ctx:"recreation study"},
+    {subject:"a modern minimalist gig or exhibition poster you admire", ctx:"recreation study"}
+  ],
+  titleFn:v=>`Recreate & Remix: ${v.subject}`,
+  scenarioFn:v=>`Find ${v.subject}. Recreate its layout as closely as you can — same grid, same proportions, same type placement — then design your own variation using a completely different subject.`,
+  deliverable:"A close recreation of the reference's structure, plus one original variation that keeps the underlying grid but swaps in your own content.",
+  baseConstraints:["Match the reference's grid and proportions, not just its 'vibe'","Note the exact type sizes/ratios you observe before recreating them","The remix must use a different subject than the original"],
+  direction:"Resist redesigning as you go — the point is to understand why the original works before you change anything. Save your opinions for the remix.",
+  process:[["Study the reference: grid, ratios, type scale",15],["Recreate it as faithfully as you can",30],["Sketch your remix concept",10],["Build the remix using the same grid",20]],
+  references:["Josef Müller-Brockmann","Armin Hofmann","Wim Crouwel"],
+  approaches:["A 1:1 structural recreation, then a bold content swap","A recreation that keeps grid but shifts color system entirely"],
+  focus:["grid literacy","structural analysis","disciplined observation"],
+  extraChallenge:"Write two sentences on the single biggest structural decision the original designer made.",
+  reflection:"What did the original do that you wouldn't have thought to do yourself?"
+},
+{
+  id:"geometric_album_cover", family:"il", ladder:"illustration", taskType:"create",
+  primary:"il_shape", secondary:["il_form"], diff:2, time:45, minTime:15,
+  goal:"Build visual interest using only geometric construction — no freehand drawing.",
+  variants:[
+    {subject:"a fictional electronic album called AFTERGLOW", ctx:"album cover illustration"},
+    {subject:"an editorial illustration accompanying an article about artificial intelligence", ctx:"editorial illustration"}
+  ],
+  titleFn:v=>`Illustrate ${v.subject} Using Shape Alone`,
+  scenarioFn:v=>`Create an illustration for ${v.subject}, built entirely from circles, squares, and triangles. No freehand lines or organic curves are allowed.`,
+  deliverable:"One square (1:1) illustration composed only from geometric primitives, with a clear focal point.",
+  baseConstraints:["Only circles, squares, and triangles — no freehand shapes","Square 1:1 canvas","Maximum 4 shapes layered to build the focal object"],
+  direction:"Pick one primitive to dominate the composition and use the other two as support. Overlap and scale shapes rather than adding more of them.",
+  process:[["Thumbnail 4 shape arrangements",10],["Pick the strongest",5],["Build the final composition",20],["Adjust proportions and overlap",10]],
+  references:["Bauhaus geometric abstraction","Alexander Rodchenko","contemporary geometric album art"],
+  approaches:["One dominant shape with two small supporting accents","A tessellated field of repeated shapes","A single large shape interrupted by one contrasting small one"],
+  focus:["shape language","construction over decoration","focal point"],
+  extraChallenge:"Recreate the same composition using only 3 shapes total.",
+  reflection:"Which shape did the most visual work, and why?"
+},
+{
+  id:"negative_space_thriller", family:"pd", ladder:"poster", taskType:"create",
+  primary:"gd_negspace", secondary:["pd_composition","gd_hierarchy"], diff:3, time:60, minTime:20,
+  goal:"Use empty space as an active compositional element, not leftover background.",
+  variants:[
+    {subject:"a fictional psychological thriller film called THE LAST ROOM", ctx:"movie poster"},
+    {subject:"a minimalist literary novel called THE QUIET HOUSE", ctx:"book cover"}
+  ],
+  titleFn:v=>`Design a Poster for "${v.subject.match(/called ([A-Z\\s]+)/)? v.subject.split('called ')[1] : v.subject}"`,
+  scenarioFn:v=>`Design a poster for ${v.subject}. There are no characters allowed — the tension has to come entirely from composition and what's left out.`,
+  deliverable:"One poster with a single main object, the title integrated into the composition, and negative space doing real compositional work.",
+  baseConstraints:["One main object only — no characters","No more than 3 colors total","The title must be physically integrated into the composition, not just placed on top","Create 3 thumbnail compositions before finishing one"],
+  direction:"Push the main object off-center and let the emptiness around it carry the unease. Ask what the negative space is 'looking at' or pressing toward.",
+  process:[["Brainstorm 5 possible main objects",10],["Thumbnail 3 compositions",15],["Develop the strongest one",25],["Integrate the title",10]],
+  references:["Saul Bass film posters","A24 minimalist poster design","Polish film poster school"],
+  approaches:["Object pushed to a far corner, vast emptiness around it","Object cropped at the edge, implying it continues off-frame","Symmetrical composition with one small deliberate disruption"],
+  focus:["negative space","tension through composition","restraint"],
+  extraChallenge:"Make a second version with zero color — grayscale only — and see if the tension survives.",
+  reflection:"Did the emptiness feel intentional, or just unfinished? What's the difference?"
+},
+{
+  id:"one_typeface_lecture_poster", family:"pd", ladder:"poster", taskType:"create",
+  primary:"pd_typography", secondary:["gd_typography"], diff:2, time:40, minTime:15,
+  goal:"Get real mileage out of a single typeface before reaching for a second one.",
+  variants:[
+    {subject:"a design lecture series called MAKING SENSE", ctx:"lecture poster"},
+    {subject:"a monthly jazz night called BLUE HOUR", ctx:"gig poster"}
+  ],
+  titleFn:v=>`Design a One-Typeface Poster for ${v.subject}`,
+  scenarioFn:v=>`Design a poster for ${v.subject} using a single typeface for everything — title, date, and details. Every ounce of hierarchy has to come from how you use that one face.`,
+  deliverable:"One poster using exactly one typeface family, with clear hierarchy between the name, date, and details.",
+  baseConstraints:["Exactly 1 typeface (any number of weights/sizes within it)","Must include a name, date, and location/details","No decorative graphic elements — type is the entire image"],
+  direction:"Explore the typeface's full range before you decide it's boring — try its lightest and heaviest weights, extreme size jumps, and letter-spacing changes.",
+  process:[["Test the typeface at 4 extreme size/weight combos",10],["Sketch 3 layout directions",10],["Build the final layout",15],["Fine-tune spacing and alignment",5]],
+  references:["type specimen posters","Helvetica documentary-era Swiss posters","Massimo Vignelli"],
+  approaches:["One giant word, everything else tiny","An evenly-weighted grid of equal-sized lines","A single word broken across multiple lines at different scales"],
+  focus:["typographic range","hierarchy without color","discipline"],
+  extraChallenge:"Redo it using only the italic or one alternate style of the same typeface.",
+  reflection:"What did limiting yourself to one typeface force you to notice about it?"
+},
+{
+  id:"grid_editorial_spread", family:"gd", ladder:"poster", taskType:"study",
+  primary:"gd_grids", secondary:["gd_layout"], diff:2, time:35, minTime:15,
+  goal:"Understand how a grid creates order before you're allowed to break one.",
+  variants:[
+    {subject:"a magazine spread about a building or architectural project", ctx:"editorial spread"},
+    {subject:"a data-driven poster presenting a small set of statistics", ctx:"informational poster"}
+  ],
+  titleFn:v=>`Build a Grid-Based Layout for ${v.ctx}`,
+  scenarioFn:v=>`Lay out ${v.subject} using a strict 12-column grid. Every text block and image placeholder must align to the grid — no free-floating elements.`,
+  deliverable:"One layout on a visible or implied 12-column grid, with at least one text block and one image or data placeholder, properly aligned.",
+  baseConstraints:["12-column underlying grid","All elements align to the grid","Include at least one headline, one body block, and one image/data placeholder"],
+  direction:"Draw the grid first and keep it visible while you work. Notice how much decision-making the grid removes for you — that's the point.",
+  process:[["Draw the 12-column grid",5],["Block in placeholder content",10],["Assign real hierarchy to each block",10],["Refine alignment and margins",10]],
+  references:["Josef Müller-Brockmann's 'Grid Systems'","Swiss editorial design","Jan Tschichold"],
+  approaches:["Symmetrical, evenly-divided grid use","Asymmetrical grid use with generous margins on one side"],
+  focus:["grid literacy","alignment","order before expression"],
+  extraChallenge:"Redo the same content using only 6 columns instead of 12 — what has to change?",
+  reflection:"Where did the grid make a decision for you that you're glad you didn't have to make?"
+},
+{
+  id:"perspective_environment", family:"il", ladder:"illustration", taskType:"study",
+  primary:"il_perspective", secondary:["il_form","il_environment"], diff:3, time:50, minTime:18,
+  goal:"Build confidence constructing depth from basic solids before adding detail.",
+  variants:[
+    {subject:"a lone building on an empty street, seen from a low angle", ctx:"sci-fi book cover environment"},
+    {subject:"a small room with one window, seen from a corner", ctx:"picture-book interior spread"}
+  ],
+  titleFn:v=>`Construct ${v.ctx} in Two-Point Perspective`,
+  scenarioFn:v=>`Using two-point perspective, construct ${v.subject}. Build it from cubes and cylinders first — resist adding surface detail until the underlying structure holds up.`,
+  deliverable:"One environment illustration built from basic solids in correct two-point perspective, with a defined horizon line and vanishing points.",
+  baseConstraints:["Visible or implied horizon line and two vanishing points","Construct with basic solids (cubes/cylinders) before adding detail","No surface decoration until the structural pass is done"],
+  direction:"Keep your vanishing points far apart — cramped vanishing points are the #1 cause of environments that feel 'off' without students knowing why.",
+  process:[["Set horizon line + 2 vanishing points",5],["Block in basic solids",15],["Check proportions and fix errors",10],["Add one pass of surface detail",20]],
+  references:["perspective drawing fundamentals","Scott Robertson's 'How to Draw'","matte painting environment studies"],
+  approaches:["A single dominant structure with a small human-scale reference object","A wider scene with 3-4 smaller structures at varying depths"],
+  focus:["perspective construction","depth","structural thinking"],
+  extraChallenge:"Add a single figure to the scene to establish scale.",
+  reflection:"Where did the perspective break down, and what fixed it?"
+},
+{
+  id:"character_silhouette_mascot", family:"il", ladder:"illustration", taskType:"create",
+  primary:"il_character", secondary:["il_shape"], diff:3, time:45, minTime:15,
+  goal:"Make character identity readable from silhouette alone — the hardest, most useful test.",
+  variants:[
+    {subject:"a mascot for a small independent coffee roastery", ctx:"brand mascot"},
+    {subject:"a set of playable characters for a simple platformer game", ctx:"game character set"}
+  ],
+  titleFn:v=>`Design ${v.ctx}: Silhouette First`,
+  scenarioFn:v=>`Design three character concepts for ${v.subject}. Each must read clearly as a solid black silhouette, with zero internal detail — if the silhouette doesn't work, the character doesn't work.`,
+  deliverable:"Three distinct character silhouettes (solid black shapes, no internal lines) that are each instantly distinguishable from one another.",
+  baseConstraints:["Solid black silhouette only — no internal linework or color","3 distinct concepts, each clearly different in silhouette","Each must be identifiable by shape alone, no props required to read"],
+  direction:"Exaggerate one dominant shape per character (round, angular, tall, squat) rather than balancing all of them evenly — distinctiveness beats correctness here.",
+  process:[["Thumbnail 8 quick silhouette ideas",15],["Pick the 3 strongest, most distinct",5],["Refine each silhouette's shape",20],["Line them up together and compare",5]],
+  references:["Disney silhouette design principle","character design silhouette studies","icon design (extreme shape reduction)"],
+  approaches:["Three characters differentiated purely by proportion (tall/wide/small)","Three characters differentiated by one exaggerated feature each"],
+  focus:["silhouette clarity","shape-driven design","distinctiveness"],
+  extraChallenge:"Add one accessory silhouette (hat, object) to your favorite character without breaking its readability.",
+  reflection:"Could you tell your three characters apart from ten feet away? If not, what would you change?"
+},
+{
+  id:"branding_fictional_identity", family:"gd", ladder:"poster", taskType:"create",
+  primary:"gd_branding", secondary:["gd_identity"], diff:3, time:55, minTime:20,
+  goal:"Practice generating multiple genuinely different directions before committing to one.",
+  variants:[
+    {subject:"a small neighborhood plant shop called TERRA", ctx:"brand identity"},
+    {subject:"an independent record label called AMBER LINE", ctx:"brand identity"}
+  ],
+  titleFn:v=>`Design a Logo System for ${v.subject}`,
+  scenarioFn:v=>`Design a mark for ${v.subject}. Produce three genuinely different visual directions — not three tweaks of the same idea — before picking one to refine.`,
+  deliverable:"Three distinct logo mark concepts for the same name, plus one refined version of your favorite, with one supporting pattern or secondary mark.",
+  baseConstraints:["3 directions must differ in approach, not just style (e.g. wordmark vs symbol vs monogram)","Refined version must work at small scale (favicon-sized)","Include one secondary application: pattern, texture, or supporting mark"],
+  direction:"Force real variety by assigning yourself a different strategy per direction: one wordmark-only, one symbol-led, one monogram or initial-based.",
+  process:[["Direction 1: wordmark-led",10],["Direction 2: symbol-led",10],["Direction 3: monogram/initial-led",10],["Pick and refine one",15],["Design one secondary application",10]],
+  references:["Paul Rand","identity design case studies","small-batch/independent brand identities"],
+  approaches:["A confident, minimal wordmark with one typographic quirk","A simple abstract symbol paired with a clean wordmark","A monogram that doubles as a pattern element"],
+  focus:["divergent thinking","identity systems","scalability"],
+  extraChallenge:"Show your refined mark in one real context: a bag, a sign, or a business card.",
+  reflection:"Which of your 3 directions was hardest to develop, and what made it hard?"
+},
+{
+  id:"image_type_concert_poster", family:"pd", ladder:"poster", taskType:"create",
+  primary:"pd_imagetype", secondary:["pd_composition"], diff:3, time:55, minTime:20,
+  goal:"Get an image and typography to share a composition without either one losing.",
+  variants:[
+    {subject:"a solo artist's tour poster combining a photo and their name", ctx:"concert poster"},
+    {subject:"a magazine cover combining a photo and cover lines", ctx:"editorial cover"}
+  ],
+  titleFn:v=>`Combine Image + Type for a ${v.ctx}`,
+  scenarioFn:v=>`Design ${v.subject}. The image and the typography need to work as one composition — neither should feel like it was dropped on top of the other.`,
+  deliverable:"One poster/cover combining a single image with typography, where the type interacts with the image (cropping, overlap, or negative space) rather than sitting in a separate zone.",
+  baseConstraints:["Exactly one image and one typographic block, no more","Type must interact with the image, not just float beside it","Maximum 2 colors outside the image itself"],
+  direction:"Try letting the image dictate the crop and the type fill whatever space it leaves behind, rather than designing a text zone and an image zone separately.",
+  process:[["Choose or rough in the image",5],["Try 3 ways type can interact with it",15],["Develop the strongest pairing",25],["Refine color and spacing",10]],
+  references:["A24 poster design","Pentagram editorial covers","classic tour poster design"],
+  approaches:["Type cropped by or bleeding behind the image","Type placed entirely within the image's negative space","Type as a frame around a tightly cropped image"],
+  focus:["image/type integration","composition","restraint"],
+  extraChallenge:"Make a version where the type is the same color as part of the image and nearly disappears into it on purpose.",
+  reflection:"At what point did the image and type start to feel like one thing instead of two things stacked?"
+},
+{
+  id:"experimental_layout_break", family:"pd", ladder:"poster", taskType:"experiment",
+  primary:"pd_experimental", secondary:["gd_layout"], diff:4, time:55, minTime:20,
+  goal:"Learn to break a rule on purpose, with control, instead of by accident.",
+  variants:[
+    {subject:"an avant-garde art exhibition called FRICTION", ctx:"experimental exhibition poster"},
+    {subject:"a typography-only poster exploring instability and imbalance", ctx:"experimental type poster"}
+  ],
+  titleFn:v=>`Break the Grid — Deliberately — for ${v.subject}`,
+  scenarioFn:v=>`Design a poster for ${v.subject}. Start with a clean, correct grid — then intentionally violate it in exactly one controlled way that still feels designed, not sloppy.`,
+  deliverable:"One poster with a visible, disciplined underlying grid and exactly one deliberate, controlled grid violation (tilt, overlap, bleed, or scale break).",
+  baseConstraints:["Must start from a real, followable grid","Exactly ONE rule broken — not several at once","The break must draw the eye somewhere specific, not just look chaotic"],
+  direction:"Design the correct, boring version first. Only then decide which single element earns the disruption — usually the thing that most needs attention.",
+  process:[["Build the correct grid-based version first",20],["Identify the one element that deserves to break the rule",5],["Execute the break with control",20],["Check: does chaos read as intentional?",10]],
+  references:["David Carson","Dutch experimental design (Wim Crouwel counter-examples)","punk/zine poster design"],
+  approaches:["One line of type breaks scale dramatically against a calm grid","One element bleeds off the edge while everything else stays contained","One block rotates slightly off-axis against a rigid structure"],
+  focus:["intentional rule-breaking","control","tension"],
+  extraChallenge:"Show the 'correct' version and the 'broken' version side by side — does the break earn its place?",
+  reflection:"How do you know the difference between an intentional break and a mistake, looking at your own work?"
+},
+{
+  id:"value_lighting_mood", family:"il", ladder:"illustration", taskType:"practice",
+  primary:"il_value", secondary:["il_lighting"], diff:3, time:40, minTime:15,
+  goal:"Build mood using light and shadow alone, before color enters the picture.",
+  variants:[
+    {subject:"a lone chair in an otherwise empty room, lit from one side", ctx:"book cover mood study"},
+    {subject:"a single object on a table at night, lit by one small light source", ctx:"editorial mood illustration"}
+  ],
+  titleFn:v=>`Render ${v.ctx} in Three Values`,
+  scenarioFn:v=>`Render ${v.subject} using only three value steps — light, mid, and dark. No color, no gradients, no more than three flat tones.`,
+  deliverable:"One illustration rendered in exactly three flat value steps, with a clear, single light source establishing the mood.",
+  baseConstraints:["Exactly 3 flat value steps — no gradients","Grayscale only, no color","One clear, identifiable light source"],
+  direction:"Decide the mood before you decide the object — is this lonely, tense, calm, ominous? Let that decision drive where the shadow falls, not just where the object's geometry says it should.",
+  process:[["Decide the mood/feeling first",5],["Block the object's basic form",10],["Assign the 3 values based on the light source",15],["Refine shadow edges for mood",10]],
+  references:["chiaroscuro / value studies","film noir lighting","Edward Hopper's use of light"],
+  approaches:["Hard, dramatic light/shadow split (high contrast)","Soft, low-contrast lighting for a quieter mood"],
+  focus:["value control","mood","light logic"],
+  extraChallenge:"Redo the same object with the light source moved to the opposite side — how does the mood change?",
+  reflection:"Did the value study actually read as the mood you intended, or something else?"
+},
+{
+  id:"personal_project_session", family:"project", ladder:null, taskType:"project",
+  primary:"pd_concept", secondary:["pd_composition","gd_composition"], diff:3, time:90, minTime:30,
+  goal:"Move an actual piece of work forward instead of starting something new.",
+  variants:[
+    {subject:"your active project", ctx:"personal project session"},
+    {subject:"a piece you've been meaning to finish", ctx:"personal project session"}
+  ],
+  titleFn:v=>`Project Session: Push ${v.subject} Forward`,
+  scenarioFn:v=>`Dedicate this session entirely to ${v.subject}. Pick one concrete unfinished step and finish it — not everything, one step.`,
+  deliverable:"Visible forward progress on one existing piece — one completed step (concept, sketch, refinement, or final pass), not a new piece.",
+  baseConstraints:["Must be an existing piece, not a new idea","Choose exactly one step to complete this session","Stop when that step is done, even if you have time left"],
+  direction:"Name the single step out loud before starting — 'today I am finishing the composition,' not 'today I am working on the poster.' Vague sessions produce vague progress.",
+  process:[["Name the one step you'll finish",5],["Do the work",70],["Review against the original goal",10],["Note the next step for later",5]],
+  references:[],
+  approaches:["Pick the step you've been avoiding — it's usually the bottleneck","Pick the fastest remaining step to build momentum"],
+  focus:["finishing","momentum","scope discipline"],
+  extraChallenge:"Write one sentence describing exactly what step comes next, so future-you doesn't have to re-decide.",
+  reflection:"What made you avoid this step before now?"
+},
+
+/* ---- street / urban / illustration / music curriculum ---- */
+{
+  id:"stylized_streetwear_character", family:"il", ladder:"illustration", taskType:"create",
+  primary:"il_cartoon", secondary:["il_character","street_wear"], diff:2, time:50, minTime:18,
+  goal:"Build a stylized character that could live on a hoodie or hangtag, not just a page.",
+  variants:[
+    {subject:"a fictional streetwear character called GHOST WALKER", ctx:"streetwear character illustration"},
+    {subject:"a mascot for a skate crew called LOW TIDE", ctx:"skate graphic character"}
+  ],
+  titleFn:v=>`Illustrate ${v.subject}`,
+  scenarioFn:v=>`Design ${v.subject} as a stylized, graphic character — the kind that could print cleanly on a hoodie or hangtag, not a rendered painting.`,
+  deliverable:"One finished character illustration using exactly 5 flat colors, clean shapes, and confident linework.",
+  baseConstraints:["Exactly 5 flat colors, no gradients","Flat, graphic rendering — no soft shading","Character must read clearly at small (sticker) size"],
+  direction:"Design the silhouette before the details. Push proportions somewhere unexpected — oversized head, tiny hands, exaggerated stance — stylization comes from confident distortion, not accuracy.",
+  process:[["Thumbnail 4 silhouette/pose ideas",10],["Pick the strongest",5],["Clean linework pass",20],["Flat color + final cleanup",15]],
+  references:["contemporary streetwear graphic art","skate brand mascot design","Steven Harrington","graphic sticker illustration"],
+  approaches:["A bold, chunky-proportioned character","A lanky, exaggerated-limb character","A minimal geometric-first character"],
+  focus:["silhouette","flat color rendering","graphic stylization"],
+  extraChallenge:"Reduce the character to a single-color sticker version.",
+  reflection:"Would this character survive being printed 1 inch tall on a hangtag?"
+},
+{
+  id:"vector_urban_scene", family:"vector", ladder:"vector", taskType:"create",
+  primary:"vec_geometric", secondary:["vec_simplify","street_env"], diff:3, time:55, minTime:20,
+  goal:"Practice simplifying a real environment down to clean, graphic vector shapes.",
+  variants:[
+    {subject:"a city street corner with a bodega and a fire escape", ctx:"vector urban illustration"},
+    {subject:"a skate spot: a set of stairs, a rail, and a wall of tags", ctx:"vector skate illustration"}
+  ],
+  titleFn:v=>`Vector Illustration: ${v.ctx}`,
+  scenarioFn:v=>`Illustrate ${v.subject} using only geometric shapes, reduced to their simplest graphic form. Think screen-print, not photograph.`,
+  deliverable:"One flat, vector-style illustration of the scene using exactly 4 colors and no gradients or texture.",
+  baseConstraints:["Exactly 4 flat colors","Built from geometric shapes — no freehand organic linework","No gradients, no texture, no noise"],
+  direction:"Simplify ruthlessly — if a detail doesn't help read the scene in half a second, cut it. Let 2-3 shapes carry the whole read.",
+  process:[["Rough thumbnail of the scene",10],["Block in major shapes",15],["Reduce/simplify a second pass",15],["Flat color and cleanup",15]],
+  references:["screen-print poster art","flat vector cityscape illustration","WPA-era simplified poster illustration"],
+  approaches:["A single strong focal shape with minimal supporting detail","An evenly-weighted graphic pattern across the whole scene"],
+  focus:["simplification","shape economy","flat color"],
+  extraChallenge:"Redo the same scene using only 3 colors instead of 4.",
+  reflection:"What was the first detail you cut, and did you miss it in the final version?"
+},
+{
+  id:"album_cover_hiphop", family:"music", ladder:"poster", taskType:"create",
+  primary:"music_albums", secondary:["il_silhouette","color_limited"], diff:3, time:60, minTime:20,
+  goal:"Design cover art that reads as strong and specific from a thumbnail-sized streaming tile.",
+  variants:[
+    {subject:"a fictional underground hip-hop artist named COLD FRONT", ctx:"hip-hop album cover"},
+    {subject:"a fictional lo-fi/boom-bap producer named RUST BELT", ctx:"instrumental album cover"}
+  ],
+  titleFn:v=>`Design Album Cover Art for ${v.subject}`,
+  scenarioFn:v=>`Design the album cover for ${v.subject}. It has to work as a tiny thumbnail on a streaming app and still hold up at full size on vinyl.`,
+  deliverable:"One square (1:1) album cover using a limited color palette and a strong central silhouette or graphic focal point, with the artist name integrated.",
+  baseConstraints:["Square 1:1 canvas","Limited palette: 1 dominant + 1 secondary + 1 accent color","Strong silhouette or single graphic focal point","Artist name integrated into the composition, not just stamped on top"],
+  direction:"Test it small before you finish it big — shrink your work-in-progress to thumbnail size regularly. If the focal point disappears, simplify further.",
+  process:[["Sketch 3 cover concepts",15],["Pick the strongest",5],["Develop the focal illustration/graphic",25],["Integrate type + finalize palette",15]],
+  references:["underground hip-hop cover art","Stones Throw Records art direction","boom-bap era cover design"],
+  approaches:["A single high-contrast silhouette against a flat color field","A textured, gritty type-led cover with a small graphic mark","A symbol-led cover with no figure at all"],
+  focus:["thumbnail readability","limited palette","focal point"],
+  extraChallenge:"Design a second version using an entirely different dominant color and see if the mood survives.",
+  reflection:"Did it still read clearly when shrunk to thumbnail size?"
+},
+{
+  id:"streetwear_typography_treatments", family:"gd", ladder:"poster", taskType:"practice",
+  primary:"gd_lettering", secondary:["street_wear","gd_typography"], diff:2, time:35, minTime:15,
+  goal:"Explore expressive typographic range for a brand voice, not just legibility.",
+  variants:[
+    {subject:"a fictional streetwear brand called CONCRETE STATE", ctx:"streetwear brand typography"},
+    {subject:"a fictional skate brand called NO CURFEW", ctx:"skate brand typography"}
+  ],
+  titleFn:v=>`Three Typographic Treatments for ${v.subject}`,
+  scenarioFn:v=>`Design three completely different typographic treatments of ${v.subject}'s name — the way a brand might explore its own logotype before locking one in.`,
+  deliverable:"Three distinct typographic treatments of the same brand name, each with a clearly different personality.",
+  baseConstraints:["Same brand name across all 3 treatments","Each treatment must feel genuinely different in personality, not just a font swap","At least one treatment must be hand-drawn or custom-altered lettering"],
+  direction:"Assign each treatment a one-word mood before starting (e.g. 'aggressive', 'clean', 'worn') and let that word drive every decision — weight, spacing, distortion.",
+  process:[["Pick 3 contrasting moods",5],["Treatment 1",10],["Treatment 2",10],["Treatment 3",10]],
+  references:["streetwear brand logotypes","graffiti-influenced lettering","hardcore/punk flyer typography"],
+  approaches:["A clean, confident sans wordmark","A distorted, hand-cut stencil treatment","A loose, spray-influenced script"],
+  focus:["typographic range","brand voice","lettering"],
+  extraChallenge:"Pick your favorite and mock it up small, like it's printed on a hangtag.",
+  reflection:"Which treatment would you actually trust as a brand's real logotype, and why?"
+},
+{
+  id:"sticker_pack_design", family:"vector", ladder:"vector", taskType:"create",
+  primary:"vec_character", secondary:["vec_icon","street_wear"], diff:2, time:45, minTime:18,
+  goal:"Design a small cohesive set rather than one isolated piece — a real practical deliverable.",
+  variants:[
+    {subject:"a 4-sticker pack for a fictional coffee/skate hybrid shop called GRIND", ctx:"sticker pack"},
+    {subject:"a 4-sticker pack for a fictional independent record label", ctx:"sticker pack"}
+  ],
+  titleFn:v=>`Design a Sticker Pack for ${v.ctx}`,
+  scenarioFn:v=>`Design ${v.subject}. Each sticker needs a clean die-cut edge and has to work standing completely alone — no shared background to lean on.`,
+  deliverable:"Four distinct sticker designs that share a consistent color palette and visual language, each with a clean die-cuttable silhouette.",
+  baseConstraints:["4 stickers, same shared palette (max 4 colors total across the set)","Each sticker must have a clean, simple die-cut silhouette","No sticker relies on the others to make sense"],
+  direction:"Design the set, not four singles — settle your palette and a shape language first, then vary subject across the four.",
+  process:[["Lock a 4-color palette + shape language",10],["Sticker 1 + 2",15],["Sticker 3 + 4",15],["Check the set together as a sheet",5]],
+  references:["sticker sheet design","skate/streetwear sticker packs","die-cut vinyl sticker art"],
+  approaches:["Four variations on one recurring character","Four unrelated icons unified purely by palette"],
+  focus:["set cohesion","silhouette","practical deliverables"],
+  extraChallenge:"Arrange all four into a mock sticker sheet layout.",
+  reflection:"Do the four actually feel like they belong to the same set, or just the same file?"
+},
+{
+  id:"editorial_illustration_street_culture", family:"il", ladder:"illustration", taskType:"create",
+  primary:"il_storytelling", secondary:["street_contemporary","il_style"], diff:3, time:55, minTime:20,
+  goal:"Practice translating an abstract idea into one clear illustrated image — a real editorial skill.",
+  variants:[
+    {subject:"an article about the rise of DIY underground music venues", ctx:"editorial illustration"},
+    {subject:"an article about street art and city gentrification", ctx:"editorial illustration"}
+  ],
+  titleFn:v=>`Editorial Illustration: ${v.subject}`,
+  scenarioFn:v=>`Illustrate a single accompanying image for ${v.subject}. A reader should get the article's core idea from your image before reading a word of text.`,
+  deliverable:"One illustration that visually communicates the article's central idea through a single strong metaphor or scene, in a contemporary graphic illustration style.",
+  baseConstraints:["One clear visual metaphor or scene — not a literal collage of unrelated symbols","Contemporary graphic illustration style (flat/graphic, not painterly realism)","Maximum 4 colors"],
+  direction:"Write the article's idea in one sentence first. Then ask: what single image says that sentence without any caption?",
+  process:[["Summarize the idea in one sentence",5],["Brainstorm 5 visual metaphors",15],["Thumbnail the strongest 2",10],["Develop the final illustration",25]],
+  references:["The New Yorker editorial illustration","contemporary op-ed illustration","graphic metaphor-driven illustration"],
+  approaches:["A single object standing in for the whole idea","A scene with one clear visual tension","An abstract graphic composition, no literal scene at all"],
+  focus:["visual storytelling","concept translation","restraint"],
+  extraChallenge:"Show the piece to someone without the headline and see if they can guess the topic.",
+  reflection:"Did the image carry the idea, or did it need the headline to make sense?"
+},
+{
+  id:"music_poster_expressive_type", family:"music", ladder:"poster", taskType:"create",
+  primary:"music_posters", secondary:["gd_lettering","il_character"], diff:3, time:60, minTime:20,
+  goal:"Combine expressive hand-drawn typography with character illustration in one unified poster.",
+  variants:[
+    {subject:"a warehouse show headlined by a fictional artist called STATIC BLOOM", ctx:"music poster"},
+    {subject:"a fictional punk/hardcore matinee show called NO SLEEP TIL NOON", ctx:"music poster"}
+  ],
+  titleFn:v=>`Design a Poster for ${v.subject}`,
+  scenarioFn:v=>`Design a poster for ${v.subject}, combining expressive hand-drawn or distorted typography with a stylized character or figure illustration — both need to feel like they belong to the same hand.`,
+  deliverable:"One poster combining hand-drawn/expressive typography with a character or figure illustration, sharing one consistent visual language.",
+  baseConstraints:["Typography must be hand-drawn, distorted, or custom-altered — no clean default type","Must include one character or figure illustration","Type and illustration must share the same visual language (line quality, color, texture)"],
+  direction:"Draw the type and the figure in the same pass mentality — same line weight, same looseness — so they don't read as two different designers' work stitched together.",
+  process:[["Rough thumbnail: figure + type relationship",15],["Develop the figure illustration",20],["Develop the expressive type",15],["Unify color and finalize",10]],
+  references:["hardcore/punk flyer art","DIY show poster culture","expressive hand-lettered gig posters"],
+  approaches:["Type wrapping around or interacting with the figure","Figure built partly out of the lettering itself","Separate but visually matched figure and type blocks"],
+  focus:["hand-drawn typography","illustration + type unity","expressive linework"],
+  extraChallenge:"Redo the type treatment only, in a completely different hand-drawn style, and compare.",
+  reflection:"Did the type and the figure feel like one drawing, or two things glued together?"
+},
+
+/* ---- targeted skill-focus exercises (used by "practice a specific skill") ---- */
+{
+  id:"skillfocus_lineart", family:"il", ladder:"illustration", taskType:"practice", focusSkill:true, skillTag:"lineart",
+  primary:"il_line", secondary:["il_lineweight"], diff:2, time:45, minTime:15,
+  goal:"Train confident, expressive linework using line weight alone to build the drawing.",
+  variants:[{subject:"the same stylized streetwear character", ctx:"expressive character line art"}],
+  titleFn:()=>`Line Art — Expressive Character`,
+  scenarioFn:()=>`Create three versions of the same stylized character using three different line-art approaches. Same pose, same character — only the linework changes.`,
+  deliverable:"Three line-art versions of one character, each using a different line-weight strategy, no color or shading.",
+  baseConstraints:["Same character/pose across all three versions","Line only — no color, no shading","Each version must use a genuinely different line-weight strategy"],
+  direction:"Focus on: line weight, confident unbroken strokes, contour, expressive line, and separating foreground from background using weight alone.",
+  process:[["Rough sketch",5],["Clean line art — approach 1",20],["Second line-art approach",15],["Compare the results",5]],
+  references:["ink comic linework","manga line-weight technique","brush-pen character illustration"],
+  approaches:["Thick outer contour + thin interior lines","Uniform line weight throughout","Minimal linework with selective contours only"],
+  focus:["line weight","confident strokes","contour","foreground/background separation"],
+  extraChallenge:"Try a fourth version using only a single unbroken line.",
+  reflection:"Which line-weight approach made the character feel most alive, and why?"
+},
+{
+  id:"skillfocus_anatomy", family:"il", ladder:"illustration", taskType:"practice", focusSkill:true, skillTag:"anatomy",
+  primary:"il_anatomy", secondary:["il_gesture","il_proportion"], diff:2, time:40, minTime:15,
+  goal:"Build dynamic, believable poses for stylized characters — not academic figure accuracy.",
+  variants:[{subject:"a stylized urban character", ctx:"dynamic character poses"}],
+  titleFn:()=>`Anatomy — Dynamic Character Poses`,
+  scenarioFn:()=>`Create five quick poses for a stylized urban character, then choose the strongest one and turn it into a finished cartoon illustration.`,
+  deliverable:"Five quick gesture poses of one stylized character, plus one finished illustration developed from the strongest pose.",
+  baseConstraints:["5 poses, 60-90 seconds each, gesture only — no detail","Stylized/cartoon proportions, not academic accuracy","Pick exactly one pose to finish"],
+  direction:"Focus on: torso rotation, shoulder/hip relationship, weight distribution, gesture flow, and foreshortening. Exaggerate the pose's energy before you worry about correctness.",
+  process:[["5 quick gesture poses",10],["Pick the strongest",5],["Clean sketch of the chosen pose",10],["Finish as a cartoon illustration",15]],
+  references:["dynamic gesture drawing","stylized character pose sheets","action cartooning fundamentals"],
+  approaches:["A grounded, weighty pose","An off-balance, mid-action pose","An exaggerated, cartoon-physics pose"],
+  focus:["torso rotation","weight distribution","gesture","foreshortening"],
+  extraChallenge:"Redraw your finished pose mirrored, from memory, without looking at the original.",
+  reflection:"Which of the five poses had the most energy before you even added detail?"
+},
+{
+  id:"skillfocus_textures", family:"il", ladder:"illustration", taskType:"practice", focusSkill:true, skillTag:"textures",
+  primary:"il_texture", secondary:["il_rendering"], diff:2, time:40, minTime:15,
+  goal:"Build a small reusable texture vocabulary for urban illustration work.",
+  variants:[{subject:"urban surfaces", ctx:"texture study"}],
+  titleFn:()=>`Texture Study — Urban Surfaces`,
+  scenarioFn:()=>`Create a small texture sheet covering concrete, brick, metal, denim, spray paint, and paper — then use at least two of them in a small urban illustration.`,
+  deliverable:"A six-part texture reference sheet, plus one small illustration applying at least two of those textures.",
+  baseConstraints:["Cover all 6 surfaces: concrete, brick, metal, denim, spray paint, paper","Each texture swatch should be simplified, not photorealistic","Apply at least 2 textures in the final small illustration"],
+  direction:"Focus on: simplifying texture into a repeatable mark, brush selection, texture density, and avoiding unnecessary detail — a texture should read at a glance, not reward staring.",
+  process:[["Texture swatches 1-3",15],["Texture swatches 4-6",15],["Small illustration applying 2 textures",10]],
+  references:["procreate/Fresco texture brush studies","graphic texture simplification","urban surface reference photography"],
+  approaches:["Hand-drawn repeatable mark-making per texture","Brush-based textures using a small custom brush set"],
+  focus:["texture simplification","brush selection","texture density"],
+  extraChallenge:"Build one more texture not on the list, based on a surface you noticed today.",
+  reflection:"Which texture was hardest to simplify without it turning muddy?"
+},
+{
+  id:"skillfocus_color", family:"color", ladder:"vector", taskType:"practice", focusSkill:true, skillTag:"color",
+  primary:"color_composition", secondary:["color_limited","color_mood"], diff:2, time:40, minTime:15,
+  goal:"Practice using a tightly limited palette to control mood, not just decoration.",
+  variants:[{subject:"a piece of album artwork", ctx:"color composition challenge"}],
+  titleFn:()=>`Color Challenge — Album Artwork`,
+  scenarioFn:()=>`Take one illustration and create three different color compositions from it — one dominant, one secondary, one accent color each time, three different moods.`,
+  deliverable:"Three color variations of the same artwork, each built from exactly one dominant + one secondary + one accent color, communicating three different moods.",
+  baseConstraints:["Same base artwork across all 3 versions","Exactly 1 dominant + 1 secondary + 1 accent color per version","Each version must communicate a clearly different mood"],
+  direction:"Focus on: hierarchy, contrast, visual balance, mood, and where the eye lands first (focal color) in each version.",
+  process:[["Prep the base artwork (existing or quick new sketch)",10],["Color pass 1",10],["Color pass 2",10],["Color pass 3",10]],
+  references:["limited-palette album art","mood-driven color grading","1-2-3 color scheme technique"],
+  approaches:["Warm/aggressive palette vs. cool/calm palette vs. desaturated/moody palette","Same hue family, shifted saturation and value only"],
+  focus:["hierarchy","contrast","mood","focal color"],
+  extraChallenge:"Show all three side by side and pick the one that best matches the artist's actual sound (real or imagined).",
+  reflection:"Which single color swap changed the mood the most?"
+},
+{
+  id:"skillfocus_composition", family:"pd", ladder:"poster", taskType:"practice", focusSkill:true, skillTag:"composition",
+  primary:"pd_composition", secondary:["gd_hierarchy"], diff:2, time:40, minTime:15,
+  goal:"Separate composition decisions from content decisions by holding content constant.",
+  variants:[{subject:"a fictional underground music event", ctx:"composition thumbnails"}],
+  titleFn:()=>`Composition — Urban Poster`,
+  scenarioFn:()=>`Create five thumbnail compositions for the same fictional music event. Keep the information identical across all five — only change focal point, scale, negative space, balance, and hierarchy.`,
+  deliverable:"Five thumbnail compositions using identical content, each with a genuinely different compositional strategy, plus one developed from the strongest.",
+  baseConstraints:["Same information/content in all 5 thumbnails","Each thumbnail must change focal point, scale, negative space, or balance — not just resize elements","Develop exactly one into a finished piece"],
+  direction:"Work small and fast — thumbnails should take minutes, not tens of minutes. Resist detailing any of them until you've picked a winner.",
+  process:[["5 fast thumbnails",20],["Pick the strongest",5],["Develop the chosen composition",15]],
+  references:["thumbnail composition studies","Swiss poster composition variation","layout exploration sketching"],
+  approaches:["Centered/symmetrical vs. off-center/asymmetrical","Large negative space vs. dense information"],
+  focus:["focal point","scale","negative space","balance","hierarchy"],
+  extraChallenge:"Combine your two favorite thumbnails' strongest ideas into a sixth composition.",
+  reflection:"Which thumbnail had the strongest focal point, and what specifically made it strong?"
+},
+{
+  id:"skillfocus_typography", family:"gd", ladder:"poster", taskType:"practice", focusSkill:true, skillTag:"typography",
+  primary:"gd_lettering", secondary:["gd_typography"], diff:2, time:35, minTime:15,
+  goal:"Build range in expressive, custom typographic treatment.",
+  variants:[{subject:"a fictional streetwear brand", ctx:"typographic treatments"}],
+  titleFn:()=>`Typography — Expressive Treatments`,
+  scenarioFn:()=>`Create three different typographic treatments for a fictional streetwear brand's name — explore genuinely different personalities, not font swaps.`,
+  deliverable:"Three distinct typographic treatments of the same brand name.",
+  baseConstraints:["Same brand name across all three","Each treatment must feel like a different personality, not just a different font","At least one must involve hand-altered or custom lettering"],
+  direction:"Pick a one-word mood for each treatment before starting and let it drive weight, spacing, and distortion decisions.",
+  process:[["Pick 3 moods",5],["Treatment 1",10],["Treatment 2",10],["Treatment 3",10]],
+  references:["streetwear logotype design","expressive hand lettering","type as texture"],
+  approaches:["Clean confident wordmark","Distorted stencil-cut treatment","Loose spray/brush-influenced script"],
+  focus:["typographic range","expressive lettering","brand voice"],
+  extraChallenge:"Mock your favorite up small, like it's printed on a hangtag.",
+  reflection:"Which treatment felt most true to a real brand voice, and why?"
+},
+{
+  id:"skillfocus_poses", family:"il", ladder:"illustration", taskType:"practice", focusSkill:true, skillTag:"poses",
+  primary:"il_gesture", secondary:["il_anatomy","il_proportion"], diff:2, time:35, minTime:15,
+  goal:"Build a small library of confident, dynamic character poses.",
+  variants:[{subject:"a stylized character of your choice", ctx:"character pose sheet"}],
+  titleFn:()=>`Character Poses — Quick Pose Sheet`,
+  scenarioFn:()=>`Draw five quick dynamic poses for one stylized character, exploring different energy levels and weight distributions, then clean up your favorite.`,
+  deliverable:"A five-pose gesture sheet of one character, plus one cleaned-up pose.",
+  baseConstraints:["5 poses, same character, gesture-speed only","Vary energy level across the 5 (calm, active, extreme, etc.)","Clean up exactly one pose fully"],
+  direction:"Focus on: weight distribution, line of action, silhouette clarity, and exaggeration — a pose should read from silhouette alone before any detail is added.",
+  process:[["5 quick gesture poses",15],["Pick the strongest",5],["Clean up the chosen pose",15]],
+  references:["dynamic pose reference sheets","line-of-action drawing method","cartoon pose exaggeration"],
+  approaches:["A calm/idle pose set","A high-energy action pose set","A mixed range from calm to extreme"],
+  focus:["line of action","weight distribution","silhouette","exaggeration"],
+  extraChallenge:"Draw a sixth pose that's a deliberate exaggeration of your cleaned-up favorite.",
+  reflection:"Did the pose read clearly as a silhouette before you added any detail?"
+}
+];
+
+const ARCH_BY_ID = {};
+ARCHETYPES.forEach(a=>{ ARCH_BY_ID[a.id] = a; });
+const CREATIVE_ARCH_IDS = ["negative_space_thriller","experimental_layout_break","character_silhouette_mascot","branding_fictional_identity","image_type_concert_poster","stylized_streetwear_character","album_cover_hiphop","music_poster_expressive_type","sticker_pack_design","editorial_illustration_street_culture"];
+const SKILL_FOCUS_TAGS = [
+  {tag:"lineart", label:"Line art", archetypeId:"skillfocus_lineart"},
+  {tag:"anatomy", label:"Anatomy / poses", archetypeId:"skillfocus_anatomy"},
+  {tag:"textures", label:"Textures", archetypeId:"skillfocus_textures"},
+  {tag:"color", label:"Color composition", archetypeId:"skillfocus_color"},
+  {tag:"composition", label:"Composition", archetypeId:"skillfocus_composition"},
+  {tag:"typography", label:"Typography", archetypeId:"skillfocus_typography"},
+  {tag:"poses", label:"Character poses", archetypeId:"skillfocus_poses"}
+];
+
+/* ===================== CONCRETE MISSION BUILDER ===================== */
+
+function ladderConstraints(archetype, level){
+  const list = archetype.baseConstraints.slice();
+  if(archetype.ladder && level>1){
+    const ladder = LADDERS[archetype.ladder];
+    for(let l=2;l<=level;l++){
+      const c = ladder[l];
+      if(c && !list.includes(c)) list.push(c);
+    }
+  }
+  return list;
+}
+
+function buildConcreteMission(archetypeId, variantIndex, level){
+  const a = ARCH_BY_ID[archetypeId];
+  const v = a.variants[variantIndex % a.variants.length];
+  level = level || 1;
+  const diff = Math.min(5, a.diff + (level-1));
+  const timeScale = 1 + (level-1)*0.15;
+  return {
+    archetypeId, variantIndex, level,
+    fingerprint: `${archetypeId}:${variantIndex}:${level}`,
+    varFingerprint: `${archetypeId}:${variantIndex}`,
+    cat: a.family === "project" ? "pd" : a.family,
+    taskType: a.taskType,
+    skills: [a.primary, ...a.secondary],
+    primarySkillName: (SKILL_DEFS.find(s=>s[0]===a.primary)||[,a.primary])[1],
+    diff, time: Math.round(a.time*timeScale), minTime: a.minTime,
+    title: a.titleFn(v),
+    goal: a.goal,
+    scenario: a.scenarioFn(v),
+    deliverable: a.deliverable,
+    constraints: ladderConstraints(a, level),
+    direction: a.direction,
+    process: a.process,
+    references: a.references,
+    approaches: a.approaches,
+    focus: a.focus,
+    extraChallenge: a.extraChallenge,
+    reflection: a.reflection,
+    minDesc: `A smaller version of the same brief: ${a.deliverable} Spend far less time on polish — aim to just complete one honest pass.`
+  };
+}
+
+/* ===================== STATE ===================== */
+
+let S = null;
+const STORAGE_KEY = "practice-app-state-v2";
+let toastTimer = null;
+
+function todayStr(d){ d = d || new Date(); return d.toISOString().slice(0,10); }
+function addDays(str, n){ const d = new Date(str+"T00:00:00"); d.setDate(d.getDate()+n); return todayStr(d); }
+function daysBetween(a,b){ return Math.round((new Date(b+"T00:00:00")-new Date(a+"T00:00:00"))/86400000); }
+
+/* ===================== PROJECTS ===================== */
+/* Projects are explicitly opt-in ("+ Start a project") and represent a
+   larger real assignment — never auto-assigned. A project brief is a
+   different (larger) schema than a daily/extra mission: deliverables,
+   milestones with partial progress, a process journal, and optional
+   uploaded files. */
+
+const PROJECT_TEMPLATES = [
+{
+  id:"album_identity", title:"Album Cover + Visual Identity", typeLabel:"Music / Album Artwork",
+  subjects:["a moody electronic artist called PALE SIGNAL","an underground hip-hop artist called COLD FRONT","a lo-fi/ambient project called STATIC ORCHARD"],
+  clientFn:s=>s, context:"A fictional music artist needs a complete visual identity built around one core album cover.",
+  overviewFn:s=>`Design the album cover and supporting visual identity for ${s}. The identity needs to feel consistent enough that a fan could recognize it across a cover, a single, and a social post.`,
+  goal:"Practice designing a cohesive visual system, not just a single image.",
+  audience:"Listeners discovering the artist for the first time via a streaming thumbnail.",
+  direction:"Build one strong central image or mark, then extend it — don't design each deliverable from scratch.",
+  deliverables:["Main album cover (1:1)","Secondary/single artwork variant","Typography lockup for artist + album title","A short color system (3 colors)","Final presentation of all pieces together"],
+  constraints:["Everything must share one palette and one typographic voice","Must work as a small thumbnail, not just full-size","No stock imagery — original illustration or graphic work only"],
+  colorDirection:"Pick a limited, moody palette that could plausibly define this artist sonically as well as visually.",
+  typographyDirection:"One typeface or lettering style used consistently across cover and lockup — this is the artist's 'voice'.",
+  approaches:["Illustration-led cover with type integrated into the artwork","Type-led cover with a small supporting graphic mark","Photography-adjacent graphic treatment (no real photos, but that mood)"],
+  references:["Stones Throw Records art direction","4AD label visual identity","contemporary independent album art"],
+  process:[["Research + moodboard",1],["Concept + thumbnails",1],["Illustration/graphic development",2],["Typography system",1],["Color + final refinement",1.5],["Final presentation",0.5]],
+  durationDays:"5–7", estimatedHours:"5–8",
+  successCriteria:["Reads clearly as a thumbnail","Cover and secondary artwork feel like the same artist","Typography feels custom, not default"],
+  extraChallenge:"Design one Instagram announcement graphic using the same system.",
+  milestoneLabels:["Research","Moodboard","Concept","Illustration","Typography","Color","Final refinement"],
+  skills:["music_albums","il_style","color_composition","gd_typography"]
+},
+{
+  id:"poster_campaign", title:"Poster Campaign for an Underground Festival", typeLabel:"Poster Campaign",
+  subjects:["a two-day underground electronic festival called SUBFREQUENCY","a warehouse festival called CONCRETE GARDEN"],
+  clientFn:s=>s, context:"A fictional underground music festival needs a small campaign, not just one poster.",
+  overviewFn:s=>`Design a poster campaign for ${s}: a main poster, a secondary poster, and the supporting visual system that ties them together.`,
+  goal:"Practice building a visual identity that scales across multiple pieces.",
+  audience:"People who'd see this poster pinned on a wall or shared as a phone-sized graphic.",
+  direction:"Create a visual identity that feels raw, urban and experimental without becoming visually chaotic — control matters as much as energy.",
+  deliverables:["Main poster","Secondary poster","Event symbol/logo","Color palette","Typography system","Instagram announcement graphic","Final presentation"],
+  constraints:["Main and secondary poster must clearly belong to the same system","Event symbol must work standalone, without the full name","Maximum 3 colors across the whole campaign"],
+  colorDirection:"Raw, high-contrast, slightly aggressive — avoid anything that reads as corporate-clean.",
+  typographyDirection:"Expressive or distorted display type for the event name, kept legible for supporting information.",
+  approaches:["Brutalist typography-led system","Experimental electronic/glitch-influenced graphics","Raw street-poster aesthetic"],
+  references:["90s rave flyer design","contemporary Berlin club posters","brutalist graphic design"],
+  process:[["Research + concept",1],["Main poster",2],["Secondary poster",1.5],["Typography + color system",1.5],["Instagram graphic",1],["Final presentation",1]],
+  durationDays:"7", estimatedHours:"6–10",
+  successCriteria:["Both posters read as one campaign at a glance","Symbol works without the wordmark","Feels raw but controlled, not chaotic"],
+  extraChallenge:"Design a third poster variant using only typography, no imagery.",
+  milestoneLabels:["Research","Concept","Main Poster","Secondary Poster","Typography System","Color System","Instagram Graphic","Final Presentation"],
+  skills:["pd_composition","pd_typography","music_posters","pd_experimental"]
+},
+{
+  id:"streetwear_identity", title:"Streetwear Brand Visual Identity", typeLabel:"Brand Identity",
+  subjects:["a streetwear label called CONCRETE STATE","a skate-adjacent brand called NO CURFEW"],
+  clientFn:s=>s, context:"A small independent streetwear label needs its first real visual identity.",
+  overviewFn:s=>`Build a visual identity for ${s}: logo, typography system, color system, and one mockup application.`,
+  goal:"Practice identity thinking — one idea extended across a real system.",
+  audience:"People who'd actually wear or follow this brand — the identity needs a real point of view, not a generic one.",
+  direction:"Pick one strong idea and let it show up everywhere consistently, rather than designing each piece independently.",
+  deliverables:["Primary logo","Secondary mark/symbol","Typography system","Color system","One mockup application (hoodie, hangtag, or sticker)"],
+  constraints:["Primary logo must work in one flat color","Secondary mark must work without the wordmark","Maximum 2 colors + black/white"],
+  colorDirection:"Confident and restrained — one strong color choice does more than three timid ones.",
+  typographyDirection:"A logotype with real personality — avoid default/safe typefaces for the wordmark itself.",
+  approaches:["Wordmark-led identity with a minimal supporting symbol","Symbol-led identity with a secondary wordmark","Monogram-based identity that doubles as a pattern"],
+  references:["independent streetwear brand identities","skate brand logo design","Paul Rand's identity systems"],
+  process:[["Research + concept",1],["Logo directions",1.5],["Typography system",1],["Color system",1],["Mockup application",1.5],["Final presentation",1]],
+  durationDays:"5–7", estimatedHours:"5–8",
+  successCriteria:["Logo works at small scale (hangtag-sized)","System feels cohesive across all pieces","Has a real point of view, not a generic streetwear look"],
+  extraChallenge:"Design a second mockup application using the secondary mark only.",
+  milestoneLabels:["Research","Brand Concept","Logo Directions","Typography System","Color System","Applications","Final Presentation"],
+  skills:["gd_branding","gd_identity","street_wear","id_logo"]
+},
+{
+  id:"poster_series", title:"Three-Poster Series", typeLabel:"Poster Series",
+  subjects:["a fictional experimental art exhibition","a fictional three-night music residency"],
+  clientFn:s=>s, context:"A single event that needs three posters sharing one visual system, not three unrelated designs.",
+  overviewFn:s=>`Design a three-poster series for ${s}. All three need to clearly belong together while each standing on its own.`,
+  goal:"Practice designing variation within a system — the hardest kind of consistency.",
+  audience:"Someone who sees all three posters displayed together.",
+  direction:"Lock your system (grid, palette, typography) before starting poster 1, then vary content and composition — not the system itself — across the three.",
+  deliverables:["Poster 1","Poster 2","Poster 3 — all sharing one visual system"],
+  constraints:["Same grid, palette and typeface family across all three","Each poster must still be distinguishable at a glance","No poster is simply a recolor of another"],
+  colorDirection:"One shared palette, varied only in which color dominates each poster.",
+  typographyDirection:"One typeface family used consistently; hierarchy can vary but the voice shouldn't.",
+  approaches:["Same layout, different focal imagery per poster","Same imagery style, different layout per poster"],
+  references:["Swiss poster series design","gallery exhibition poster systems"],
+  process:[["Concept + system",1.5],["Poster 1",1.5],["Poster 2",1.5],["Poster 3",1.5],["Consistency pass",1]],
+  durationDays:"5", estimatedHours:"5–7",
+  successCriteria:["All three read as one series from across a room","Each poster still stands alone","No poster feels like a lazy recolor"],
+  extraChallenge:"Lay all three out together as they'd be displayed and check the series reads correctly.",
+  milestoneLabels:["Concept","Poster 1","Poster 2","Poster 3","Consistency Pass","Final Presentation"],
+  skills:["pd_composition","pd_conceptdev","pd_hierarchy"]
+},
+{
+  id:"editorial_series", title:"Editorial Illustration Series", typeLabel:"Editorial Illustration",
+  subjects:["a three-part series on underground music culture","a three-part series on city street life"],
+  clientFn:s=>s, context:"A publication needs three editorial illustrations for a themed series.",
+  overviewFn:s=>`Illustrate a three-part editorial series on ${s}, in a consistent contemporary graphic illustration style.`,
+  goal:"Practice sustaining one illustration style across multiple distinct pieces.",
+  audience:"A reader flipping through the publication, seeing all three across different pages.",
+  direction:"Define your style rules (line weight, palette, shape language) before piece 1, then hold them steady across all three.",
+  deliverables:["Illustration 1","Illustration 2","Illustration 3 — one consistent style"],
+  constraints:["Same color palette and line approach across all three","Each illustration must communicate a distinct idea within the theme","Contemporary graphic style, not painterly realism"],
+  colorDirection:"One limited palette used consistently across the series.",
+  typographyDirection:"None required — these are image-only editorial pieces.",
+  approaches:["Character-led illustrations across all three","Scene/metaphor-led illustrations across all three"],
+  references:["contemporary op-ed illustration series","The New Yorker illustration"],
+  process:[["Research + concept per piece",1.5],["Illustration 1",2],["Illustration 2",2],["Illustration 3",2],["Consistency pass",1]],
+  durationDays:"6", estimatedHours:"6–9",
+  successCriteria:["Style is clearly consistent across all three","Each illustration stands alone as a strong single image","Ideas are legible without needing the article text"],
+  extraChallenge:"Write the one-sentence idea each illustration is built around, and check it still holds without a caption.",
+  milestoneLabels:["Research","Concept per Piece","Illustration 1","Illustration 2","Illustration 3","Consistency Pass","Final Presentation"],
+  skills:["il_storytelling","il_style","il_cartoon"]
+},
+{
+  id:"sticker_collection", title:"Sticker / Merch Collection", typeLabel:"Merch / Sticker Set",
+  subjects:["a fictional coffee/skate hybrid shop called GRIND","a fictional independent record label"],
+  clientFn:s=>s, context:"A small brand needs a cohesive sticker/merch collection, not one isolated design.",
+  overviewFn:s=>`Design a sticker/merch collection for ${s}: a small set of designs that share one visual system and could realistically print together.`,
+  goal:"Practice designing a real practical set — cohesion, not just individual pieces.",
+  audience:"Someone who'd actually collect or wear these — they need to feel like a real product line.",
+  direction:"Settle your palette and shape language before designing individual pieces, then vary subject, not system.",
+  deliverables:["4–6 sticker/merch designs","A sticker sheet layout showing them together","A short color system"],
+  constraints:["Shared palette across the whole set (max 4 colors total)","Each piece needs a clean, simple silhouette","Set must feel cohesive as a sheet, not a grab-bag"],
+  colorDirection:"One tight shared palette across every piece in the set.",
+  typographyDirection:"Optional — only if the brand needs a wordmark sticker in the set.",
+  approaches:["Variations on one recurring character","Unrelated icons unified purely by palette and shape language"],
+  references:["sticker sheet design","skate/streetwear merch collections"],
+  process:[["Concept + system",1],["Character/icon set",2],["Color system",1],["Sticker sheet layout",1],["Final presentation",1]],
+  durationDays:"4–5", estimatedHours:"4–6",
+  successCriteria:["The set reads as one cohesive collection","Every piece has a clean, simple silhouette","Could realistically be printed and sold"],
+  extraChallenge:"Mock the sheet up as if it were being sold at a merch table.",
+  milestoneLabels:["Concept","Character/Icon Set","Color System","Sticker Sheet Layout","Final Presentation"],
+  skills:["vec_character","vec_flatcolor","vec_icon"]
+}
+];
+const PROJ_BY_ID = {};
+PROJECT_TEMPLATES.forEach(t=>{ PROJ_BY_ID[t.id]=t; });
+
+const MILESTONE_DIRECTIONS = {
+  "Research":"Gather 8-10 references that match the project's direction. Keep the ones with a clear point of view, not just the ones that look nice.",
+  "Moodboard":"Arrange your references into one moodboard and pull a rough color palette out of it.",
+  "Concept":"Write 3-5 possible concept directions in one sentence each before sketching anything.",
+  "Brand Concept":"Write 3-5 possible identity directions in one sentence each before sketching anything.",
+  "Concept per Piece":"For each remaining piece, write its one-sentence idea before illustrating it.",
+  "Sketches":"Thumbnail several rough directions before detailing any one of them.",
+  "Composition":"Lock the structural layout before adding detail — grid, focal point, hierarchy.",
+  "Illustration":"Develop the core illustration or character work for the piece.",
+  "Logo Directions":"Sketch at least 3 genuinely different logo directions before picking one to refine.",
+  "Typography":"Develop the typographic system or lettering treatment for the piece.",
+  "Typography System":"Develop the typographic system that will carry across every deliverable.",
+  "Color":"Develop the color system — dominant, secondary, accent — and test it against the composition.",
+  "Color System":"Lock a limited color system and test it across more than one deliverable.",
+  "Applications":"Apply the identity to one real mockup — see if it survives outside the design file.",
+  "Refinement":"Tighten spacing, alignment and detail without changing the core direction.",
+  "Final refinement":"Tighten spacing, alignment and detail without changing the core direction.",
+  "Consistency Pass":"Put all the pieces side by side and fix whatever breaks the shared system.",
+  "Character/Icon Set":"Develop the core character or icon set the rest of the collection will build on.",
+  "Sticker Sheet Layout":"Arrange every piece together as they'd actually be printed.",
+  "Main Poster":"Develop the primary poster — this sets the system the rest of the campaign follows.",
+  "Secondary Poster":"Develop the secondary poster using the system the main poster already established.",
+  "Instagram Graphic":"Adapt the campaign system into one social-sized graphic.",
+  "Instagram Announcement Graphic":"Adapt the campaign system into one social-sized graphic.",
+  "Poster 1":"Develop the first poster and use it to lock the shared system.",
+  "Poster 2":"Develop the second poster within the system poster 1 established.",
+  "Poster 3":"Develop the third poster within the same shared system.",
+  "Illustration 1":"Develop the first illustration and use it to lock your style rules.",
+  "Illustration 2":"Develop the second illustration within the style rules from illustration 1.",
+  "Illustration 3":"Develop the third illustration within the same style rules.",
+  "Final artwork":"Bring the piece to a finished, presentable state.",
+  "Final Presentation":"Assemble every deliverable into one clean presentation view."
+};
+function milestoneDirectionFor(label){
+  return MILESTONE_DIRECTIONS[label] || `Push the "${label}" stage of the project forward with one concrete, finishable step.`;
+}
+
+const TIME_BUCKETS = [
+  {key:"15", label:"15–20 min", minutes:18},
+  {key:"30", label:"30–45 min", minutes:40},
+  {key:"60", label:"1 hour", minutes:60},
+  {key:"120", label:"1–2 hours", minutes:100},
+  {key:"lots", label:"I have a lot of time", minutes:150}
+];
+
+function buildProjectBrief(templateId){
+  const t = PROJ_BY_ID[templateId];
+  const subject = t.subjects[Math.floor(Math.random()*t.subjects.length)];
+  return {
+    id: "proj_"+Date.now()+"_"+Math.floor(Math.random()*999),
+    templateId,
+    title: t.title, typeLabel: t.typeLabel,
+    client: t.clientFn(subject),
+    context: t.context,
+    overview: t.overviewFn(subject),
+    goal: t.goal, audience: t.audience, direction: t.direction,
+    deliverables: t.deliverables.slice(), constraints: t.constraints.slice(),
+    colorDirection: t.colorDirection, typographyDirection: t.typographyDirection,
+    approaches: t.approaches.slice(), references: t.references.slice(),
+    process: t.process, durationDays: t.durationDays, estimatedHours: t.estimatedHours,
+    successCriteria: t.successCriteria.slice(), extraChallenge: t.extraChallenge,
+    skills: t.skills.slice(),
+    milestones: t.milestoneLabels.map((label,i)=>({id:"ms"+i, label, percent:0, notes:"", files:[]})),
+    startedDate: todayStr(), completedDate: null,
+    journal: []
+  };
+}
+
+function currentMilestone(project){
+  return project.milestones.find(m=>m.percent<100) || project.milestones[project.milestones.length-1];
+}
+
+function applyProjectProgress(projectId, milestoneId){
+  const p = S.projects.find(x=>x.id===projectId);
+  if(!p) return;
+  const m = p.milestones.find(x=>x.id===milestoneId) || currentMilestone(p);
+  if(!m) return;
+  m.percent = Math.min(100, m.percent + 34);
+  if(p.milestones.every(x=>x.percent>=100)) p.completedDate = todayStr();
+  saveState();
+}
+
+function scaleProcessForMinutes(minutes){
+  if(minutes<=20) return [["Quick thumbnail sketches",Math.round(minutes*0.6)],["Pick the strongest direction",minutes-Math.round(minutes*0.6)]];
+  if(minutes<=45){
+    const a=Math.round(minutes*0.15), b=Math.round(minutes*0.65);
+    return [["Gather references / warm up",a],["Develop one direction",b],["Note next step for tomorrow",minutes-a-b]];
+  }
+  if(minutes<=70){
+    const a=5,b=Math.round(minutes*0.6),c=Math.round(minutes*0.2);
+    return [["Review where the project stands",a],["Develop the current milestone",b],["Compare against the project brief",c],["Note next step",minutes-a-b-c]];
+  }
+  const a=10,b=Math.round(minutes*0.4),c=Math.round(minutes*0.35),d=Math.round(minutes*0.15);
+  return [["Review project + milestone goal",a],["Develop 2-3 directions",b],["Refine the strongest",c],["Compare against brief + decide",d],["Note next step",minutes-a-b-c-d]];
+}
+
+function buildProjectMission(project, timeKey){
+  const bucket = TIME_BUCKETS.find(b=>b.key===timeKey) || TIME_BUCKETS[2];
+  const milestone = currentMilestone(project);
+  const minutes = bucket.minutes;
+  return {
+    archetypeId: "project:"+project.templateId, variantIndex:0, level:1,
+    fingerprint: "project:"+project.id+":"+milestone.id+":"+Date.now(),
+    varFingerprint: "project:"+project.id+":"+milestone.id,
+    cat: "pd", taskType: "project",
+    skills: project.skills, diff: 3, time: minutes, minTime: Math.round(minutes*0.4),
+    title: `${milestone.label}: Move "${project.title}" Forward`,
+    goal: `Contribute real progress on the ${milestone.label} stage of your active project.`,
+    scenario: `Your active project is "${project.title}" (${project.typeLabel}). You're currently on the ${milestone.label} milestone. Use this session to push it forward — not to perfect it, just to move it.`,
+    deliverable: `Visible progress on the ${milestone.label} milestone of "${project.title}".`,
+    constraints: [`Stay focused on the ${milestone.label} milestone only`, `Work within your chosen time: ${bucket.label}`],
+    direction: milestoneDirectionFor(milestone.label),
+    process: scaleProcessForMinutes(minutes),
+    references: project.references, approaches: [], focus: [milestone.label],
+    extraChallenge: null,
+    reflection: `What's the one thing about "${milestone.label}" you want to remember for next time?`,
+    minDesc: `A shorter push on ${milestone.label} — one small, concrete step.`,
+    projectId: project.id, milestoneId: milestone.id
+  };
+}
+
+function addJournalEntry(projectId, {category, notes, thumb}){
+  const p = S.projects.find(x=>x.id===projectId);
+  if(!p) return;
+  p.journal.push({id:"je"+Date.now(), date:todayStr(), category, notes:notes||"", thumb:thumb||null});
+  saveState();
+}
+
+function updateMilestone(projectId, milestoneId, {percent, notes, thumb}){
+  const p = S.projects.find(x=>x.id===projectId);
+  if(!p) return;
+  const m = p.milestones.find(x=>x.id===milestoneId);
+  if(!m) return;
+  if(typeof percent==="number") m.percent = percent;
+  if(typeof notes==="string") m.notes = notes;
+  if(thumb) m.files.push(thumb);
+  if(p.milestones.every(x=>x.percent>=100)) p.completedDate = todayStr();
+  else p.completedDate = null;
+  saveState();
+}
+
+function defaultState(){
+  const skills = {};
+  SKILL_DEFS.forEach(([id,name,cat])=>{ skills[id] = {id,name,cat,xp:0,level:1}; });
+  return {
+    view:"today",
+    theme:"light",
+    startDate: todayStr(),
+    lastOpenDate: todayStr(),
+    skills,
+    history: [],
+    dailyMissionDate: null,
+    dailyChoiceDate: null,   // date the general/project choice was last made (or is pending)
+    dailyMission: null,     // {mission: <concrete>, mode, status, recovery, origin:'general'|'project'}
+    extraMissions: [],      // [{uid, kind, mission:<concrete>}]
+    projects: [],
+    generatedLog: [],       // [{fingerprint, varFingerprint, date}] — every mission ever generated, daily or extra
+    harderChain: null,      // {archetypeId, variantIndex, level}
+    lastCompletionDate: null,
+    lastProjectTimeChoice: null
+  };
+}
+
+/* Backfills any project object to the current schema. Needed because a
+   project saved by an earlier version of this app (before milestones/
+   journal/deliverables existed) will crash renderProjects() — this is what
+   was actually breaking the whole Projects section. Preserves whatever
+   progress can be preserved (e.g. old checkbox-style tasksDone becomes
+   milestone percent) instead of discarding the project. */
+function sanitizeProject(p){
+  const t = PROJ_BY_ID[p.templateId];
+  const out = Object.assign({}, p);
+  out.id = out.id || ("proj_legacy_"+Date.now()+"_"+Math.floor(Math.random()*999));
+  out.title = out.title || (t ? t.title : "Untitled project");
+  out.typeLabel = out.typeLabel || (t ? t.typeLabel : "");
+  out.client = out.client || out.title;
+  out.context = out.context || (t ? t.context : "");
+  out.overview = out.overview || (t ? t.overviewFn(out.client) : "");
+  out.goal = out.goal || (t ? t.goal : "");
+  out.audience = out.audience || (t ? t.audience : "");
+  out.direction = out.direction || (t ? t.direction : "");
+  out.deliverables = Array.isArray(out.deliverables) ? out.deliverables : (t ? t.deliverables.slice() : []);
+  out.constraints = Array.isArray(out.constraints) ? out.constraints : (t ? t.constraints.slice() : []);
+  out.colorDirection = out.colorDirection || (t ? t.colorDirection : "");
+  out.typographyDirection = out.typographyDirection || (t ? t.typographyDirection : "");
+  out.approaches = Array.isArray(out.approaches) ? out.approaches : (t ? t.approaches.slice() : []);
+  out.references = Array.isArray(out.references) ? out.references : (t ? t.references.slice() : []);
+  out.process = Array.isArray(out.process) ? out.process : (t ? t.process : []);
+  out.durationDays = out.durationDays || (t ? t.durationDays : "");
+  out.estimatedHours = out.estimatedHours || (t ? t.estimatedHours : "");
+  out.successCriteria = Array.isArray(out.successCriteria) ? out.successCriteria : (t ? t.successCriteria.slice() : []);
+  out.extraChallenge = ("extraChallenge" in out) ? out.extraChallenge : (t ? t.extraChallenge : null);
+  out.skills = Array.isArray(out.skills) && out.skills.length ? out.skills : (t ? t.skills.slice() : ["pd_composition"]);
+  out.journal = Array.isArray(out.journal) ? out.journal : [];
+
+  if(!Array.isArray(out.milestones) || out.milestones.length===0){
+    const legacyDone = Array.isArray(p.tasksDone) ? p.tasksDone : [];
+    if(t){
+      // known template — map old checkbox progress onto the real milestone labels
+      out.milestones = t.milestoneLabels.map((label,i)=>({
+        id:"ms"+i, label, percent: legacyDone[i] ? 100 : 0, notes:"", files:[]
+      }));
+    } else if(Array.isArray(p.tasks) && p.tasks.length){
+      out.milestones = p.tasks.map((label,i)=>({
+        id:"ms"+i, label, percent: legacyDone[i] ? 100 : 0, notes:"", files:[]
+      }));
+    } else {
+      // no template match and no label list to recover — collapse into one
+      // milestone, but preserve the overall fraction of old progress rather
+      // than silently rounding it up to 100%.
+      const pct = legacyDone.length ? Math.round(100*legacyDone.filter(Boolean).length/legacyDone.length) : 0;
+      out.milestones = [{id:"ms0", label:"Progress", percent: pct, notes:"", files:[]}];
+    }
+  } else {
+    out.milestones = out.milestones.map((m,i)=>({
+      id: m.id || ("ms"+i),
+      label: m.label || ("Step "+(i+1)),
+      percent: typeof m.percent==="number" ? m.percent : (m.done ? 100 : 0),
+      notes: typeof m.notes==="string" ? m.notes : "",
+      files: Array.isArray(m.files) ? m.files : []
+    }));
+  }
+  out.startedDate = out.startedDate || todayStr();
+  out.completedDate = out.completedDate || null;
+  delete out.tasksDone; delete out.tasks;
+  return out;
+}
+
+async function loadState(){
+  try{
+    const raw = await Store.get(STORAGE_KEY);
+    if(raw){
+      const parsed = JSON.parse(raw);
+      S = Object.assign(defaultState(), parsed);
+      const def = defaultState().skills;
+      S.skills = Object.assign(def, S.skills || {});
+      S.projects = Array.isArray(S.projects) ? S.projects.map(sanitizeProject) : [];
+    } else {
+      // one-time migration attempt from the old key/shape, best effort
+      S = defaultState();
+    }
+  }catch(e){
+    S = defaultState();
+  }
+}
+
+async function saveState(){
+  try{ await Store.set(STORAGE_KEY, JSON.stringify(S)); }
+  catch(e){ /* best effort */ }
+}
+
+function logGenerated(mission){
+  S.generatedLog.push({fingerprint:mission.fingerprint, varFingerprint:mission.varFingerprint, date:todayStr()});
+  if(S.generatedLog.length > 200) S.generatedLog = S.generatedLog.slice(-200);
+}
+
+function recentVarFingerprints(n){
+  return S.generatedLog.slice(-n).map(g=>g.varFingerprint);
+}
+function usedFingerprints(){
+  return new Set(S.generatedLog.map(g=>g.fingerprint));
+}
+
+/* ===================== MISSION SELECTION ===================== */
+
+function skillLevel(id){ return (S.skills[id] && S.skills[id].level) || 1; }
+
+function daysSinceSkillPracticed(id){
+  for(let i=S.history.length-1;i>=0;i--){
+    const h = S.history[i];
+    if(h.status==="completed" && h.skills && h.skills.includes(id)) return daysBetween(h.date, todayStr());
+  }
+  return 999;
+}
+
+function archetypeRecentPenalty(archetypeId, windowSize){
+  const recent = S.generatedLog.slice(-(windowSize||12));
+  let penalty = 0;
+  for(let i=0;i<recent.length;i++){
+    if(recent[i].varFingerprint.indexOf(archetypeId+":")===0){
+      penalty += (recent.length - i);
+    }
+  }
+  return penalty;
+}
+
+function archetypeScore(a, opts){
+  opts = opts||{};
+  let score = 0;
+  const staleness = Math.max(...[a.primary,...a.secondary].map(daysSinceSkillPracticed));
+  score += Math.min(staleness, 14);
+  const avgLevel = [a.primary,...a.secondary].reduce((s,id)=>s+skillLevel(id),0)/(1+a.secondary.length);
+  score -= Math.abs(a.diff - Math.round(avgLevel/2)) * 1.2;
+  score -= archetypeRecentPenalty(a.id) * 1.4;
+  if(opts.typeBias && a.taskType === opts.typeBias) score += 3;
+  if(opts.family && a.family !== opts.family) score -= 999;
+  if(opts.excludeFamilies && opts.excludeFamilies.includes(a.family)) score -= 999;
+  if(opts.onlyIds && !opts.onlyIds.includes(a.id)) score -= 999;
+  if(opts.excludeId && a.id === opts.excludeId) score -= 999;
+  score += Math.random()*2.2;
+  return score;
+}
+
+function pickArchetype(opts){
+  let best=null, bestScore=-Infinity;
+  ARCHETYPES.forEach(a=>{
+    if(a.family==="project" && !(opts && opts.allowProject)) return;
+    const sc = archetypeScore(a, opts);
+    if(sc>bestScore){bestScore=sc;best=a;}
+  });
+  return best;
+}
+
+/* pick a variant index for an archetype, preferring one whose
+   var-fingerprint hasn't been generated recently */
+function pickVariant(archetype, opts){
+  opts = opts||{};
+  const recent = recentVarFingerprints(15);
+  const indices = archetype.variants.map((_,i)=>i);
+  const fresh = indices.filter(i=>{
+    const fp = `${archetype.id}:${i}`;
+    if(opts.excludeIndex===i) return false;
+    return !recent.includes(fp);
+  });
+  const pool = fresh.length ? fresh : indices.filter(i=>opts.excludeIndex!==i);
+  const finalPool = pool.length ? pool : indices;
+  return finalPool[Math.floor(Math.random()*finalPool.length)];
+}
+
+function typeForDay(dateStr){
+  const dow = new Date(dateStr+"T00:00:00").getDay();
+  const cycle = ["study","recreate","create","study","practice","create","project"];
+  return cycle[dow];
+}
+
+function missedStreakDays(){
+  let count=0, d = addDays(todayStr(),-1);
+  while(count<14){
+    const hit = S.history.some(h=>h.status==="completed" && h.date===d);
+    if(hit) break;
+    if(daysBetween(S.startDate,d) < 0) break;
+    count++;
+    d = addDays(d,-1);
+  }
+  return count;
+}
+
+function hasActiveProject(){ return S.projects.some(p=>!p.completedDate); }
+
+/* Called on every load. On a new day it resets the day's slate. If there's
+   no active project it auto-generates the general mission exactly like
+   before. If there IS an active project, it leaves S.dailyMission empty so
+   renderToday() can show the "General / Work on Project" choice — the
+   choice itself only happens once per day, right here. */
+function ensureDailyMission(){
+  const today = todayStr();
+  if(S.dailyMissionDate === today) return; // already resolved (mission set OR choice pending) for today
+  S.dailyMissionDate = today;
+  S.dailyMission = null;
+  S.extraMissions = [];
+  S.harderChain = null;
+  todayAskingTime = false;
+  if(!hasActiveProject()){
+    generateGeneralDailyMission();
+  }
+  saveState();
+}
+
+function generateGeneralDailyMission(){
+  const today = todayStr();
+  const recovery = missedStreakDays() >= 3;
+  let archetype;
+  if(recovery){
+    archetype = pickArchetype({typeBias:"practice"});
+  } else {
+    const typeBias = typeForDay(today);
+    archetype = pickArchetype({typeBias, allowProject: typeBias==="project"});
+  }
+  const variantIndex = pickVariant(archetype);
+  const mission = buildConcreteMission(archetype.id, variantIndex, 1);
+  S.dailyMission = {mission, mode:"normal", status:"active", recovery, origin:"general"};
+  logGenerated(mission);
+  saveState();
+}
+
+function chooseProjectDailyMission(project, timeKey){
+  S.lastProjectTimeChoice = timeKey;
+  const mission = buildProjectMission(project, timeKey);
+  S.dailyMission = {mission, mode:"normal", status:"active", recovery:false, origin:"project", projectId:project.id, milestoneId:mission.milestoneId};
+  saveState();
+}
+
+/* ===================== EXTRA MISSION GENERATION ===================== */
+
+function generateExtra(kind){
+  const daily = S.dailyMission.mission;
+  const isProjectOrigin = typeof daily.archetypeId==="string" && daily.archetypeId.indexOf("project:")===0;
+  const dailyArch = isProjectOrigin ? null : ARCH_BY_ID[daily.archetypeId];
+  // "similar"/"harder" don't have a normal archetype to anchor to when
+  // today's mission came from a Project — fall back to "random" instead.
+  if(isProjectOrigin && (kind==="similar" || kind==="harder")) kind = "random";
+  let mission;
+
+  if(kind === "harder"){
+    let chain = S.harderChain;
+    if(!chain) chain = {archetypeId: daily.archetypeId, variantIndex: daily.variantIndex, level: daily.level};
+    let nextLevel = chain.level + 1;
+    let archetypeId = chain.archetypeId, variantIndex = chain.variantIndex;
+    const arch = ARCH_BY_ID[archetypeId];
+    const ladderLen = arch.ladder ? Object.keys(LADDERS[arch.ladder]).length + 1 : 3;
+    if(nextLevel > ladderLen){
+      const candidates = ARCHETYPES.filter(a=>a.family===arch.family && a.id!==archetypeId && a.ladder);
+      const next = candidates[Math.floor(Math.random()*candidates.length)] || arch;
+      archetypeId = next.id;
+      variantIndex = pickVariant(next);
+      nextLevel = 3;
+    }
+    mission = buildConcreteMission(archetypeId, variantIndex, nextLevel);
+    S.harderChain = {archetypeId, variantIndex, level: nextLevel};
+  } else if(kind.indexOf("skill:")===0){
+    S.harderChain = null;
+    const tag = kind.slice(6);
+    const focus = SKILL_FOCUS_TAGS.find(f=>f.tag===tag);
+    const arch = focus ? ARCH_BY_ID[focus.archetypeId] : pickArchetype({});
+    mission = buildConcreteMission(arch.id, pickVariant(arch), 1);
+  } else {
+    S.harderChain = null;
+    if(kind === "similar"){
+      const variantIndex = pickVariant(dailyArch, {excludeIndex: daily.variantIndex});
+      mission = buildConcreteMission(daily.archetypeId, variantIndex, 1);
+    } else if(kind === "different"){
+      const allFamilies = ["gd","il","pd","color","vector","identity","music","street"];
+      const otherFamilies = allFamilies.filter(f=>f!==daily.cat);
+      const family = otherFamilies[Math.floor(Math.random()*otherFamilies.length)];
+      const arch = pickArchetype({family, typeBias:"create"}) || pickArchetype({});
+      mission = buildConcreteMission(arch.id, pickVariant(arch), 1);
+    } else if(kind === "creative"){
+      const usedIds = usedFingerprints();
+      let candidates = CREATIVE_ARCH_IDS.filter(id=>{
+        return ARCH_BY_ID[id].variants.some((_,i)=>!usedIds.has(`${id}:${i}:1`));
+      });
+      if(!candidates.length) candidates = CREATIVE_ARCH_IDS;
+      const archId = candidates[Math.floor(Math.random()*candidates.length)];
+      const arch = ARCH_BY_ID[archId];
+      mission = buildConcreteMission(archId, pickVariant(arch), 1);
+    } else { // random
+      const arch = pickArchetype({});
+      mission = buildConcreteMission(arch.id, pickVariant(arch), 1);
+    }
+  }
+
+  logGenerated(mission);
+  const inst = {uid:(kind==="harder"?"h":"x")+Date.now()+Math.floor(Math.random()*999), kind, mission};
+  S.extraMissions.push(inst);
+  saveState();
+  return inst;
+}
+
+function generateBored(){
+  const usedIds = usedFingerprints();
+  let candidates = CREATIVE_ARCH_IDS.filter(id=>{
+    return ARCH_BY_ID[id].variants.some((_,i)=>!usedIds.has(`${id}:${i}:1`));
+  });
+  if(!candidates.length) candidates = CREATIVE_ARCH_IDS;
+  const archId = candidates[Math.floor(Math.random()*candidates.length)];
+  const arch = ARCH_BY_ID[archId];
+  const mission = buildConcreteMission(archId, pickVariant(arch), 1);
+  logGenerated(mission);
+  const inst = {uid:"b"+Date.now(), kind:"bored", mission};
+  S.extraMissions.push(inst);
+  S.harderChain = null;
+  saveState();
+  return inst;
+}
+
+/* ===================== STATS ===================== */
+
+function completedDatesSet(){
+  const s = new Set();
+  S.history.forEach(h=>{ if(h.status==="completed") s.add(h.date); });
+  return s;
+}
+
+function computeStreaks(){
+  const dates = completedDatesSet();
+  let current=0, d = todayStr();
+  if(!dates.has(d)) d = addDays(d,-1);
+  while(dates.has(d)){ current++; d = addDays(d,-1); }
+  const sorted = Array.from(dates).sort();
+  let longest=0, run=0, prev=null;
+  sorted.forEach(ds=>{
+    if(prev && daysBetween(prev,ds)===1) run++; else run=1;
+    longest = Math.max(longest,run);
+    prev = ds;
+  });
+  longest = Math.max(longest,current);
+  return {current, longest};
+}
+
+function computeMonthStats(){
+  const now = new Date();
+  const y=now.getFullYear(), mo=now.getMonth();
+  const dim = new Date(y,mo+1,0).getDate();
+  const dates = completedDatesSet();
+  let completedDays=0, minutes=0, missionsCompleted=0;
+  const cells=[];
+  for(let day=1;day<=dim;day++){
+    const ds = `${y}-${String(mo+1).padStart(2,"0")}-${String(day).padStart(2,"0")}`;
+    const hit = dates.has(ds);
+    if(ds<=todayStr()){ if(hit) completedDays++; cells.push({ds,hit,future:false}); }
+    else cells.push({ds,hit:false,future:true});
+  }
+  S.history.forEach(h=>{
+    if(h.status!=="completed") return;
+    if(h.date.slice(0,7) === `${y}-${String(mo+1).padStart(2,"0")}`){
+      minutes += h.minutes||0; missionsCompleted++;
+    }
+  });
+  const elapsed = Math.min(now.getDate(), dim);
+  const consistency = elapsed>0 ? Math.round((completedDays/elapsed)*100) : 0;
+  return {completedDays, elapsed, dim, minutes, missionsCompleted, consistency, cells};
+}
+
+function totalStats(){
+  let minutes=0, missions=0;
+  S.history.forEach(h=>{ if(h.status==="completed"){ minutes+=h.minutes||0; missions++; } });
+  const projectsCompleted = S.projects.filter(p=>p.completedDate).length;
+  return {minutes, missions, projectsCompleted};
+}
+
+function xpForCompletion(mode){ return mode==="minimum" ? 6 : 12; }
+
+function applySkillGains(skillIds, mode){
+  const levelUps = [];
+  skillIds.forEach(id=>{
+    const sk = S.skills[id];
+    if(!sk) return;
+    sk.xp += xpForCompletion(mode);
+    const newLevel = Math.min(10, Math.floor(sk.xp/40)+1);
+    if(newLevel > sk.level){ sk.level = newLevel; levelUps.push(sk.name); }
+  });
+  return levelUps;
+}
+
+/* ===================== ACTIONS ===================== */
+
+let historyIdCounter = 1;
+function nextHistoryId(){ return "h"+(Date.now())+"_"+(historyIdCounter++); }
+
+function completeMission({mission, mode, source, perceived, notes, thumb, extraUid, projectId, milestoneId}){
+  const minutes = mode==="minimum" ? mission.minTime : mission.time;
+  const entry = {
+    id: nextHistoryId(),
+    date: todayStr(), title:mission.title, cat:mission.cat, type:mission.taskType,
+    skills:mission.skills, status:"completed", mode, source: source||"daily",
+    minutes, perceived: perceived||null, notes: notes||"", thumb: thumb||null,
+    /* full snapshot of the mission exactly as it was generated/assigned —
+       History always shows this, never a re-generated version, even if the
+       mission generator changes later. */
+    mission: mission,
+    projectId: projectId||null, milestoneId: milestoneId||null
+  };
+  S.history.push(entry);
+  S.lastCompletionDate = todayStr();
+  const levelUps = applySkillGains(mission.skills, mode);
+  if(source==="daily" || source==="project"){ S.dailyMission.status = "completed"; }
+  if(source==="extra" && extraUid){ S.extraMissions = S.extraMissions.filter(x=>x.uid!==extraUid); }
+  if(source==="project" && projectId){ applyProjectProgress(projectId, milestoneId); }
+  saveState();
+  return levelUps;
+}
+
+function abandonMission({mission, reason, source}){
+  S.history.push({
+    id: nextHistoryId(),
+    date: todayStr(), title:mission.title, cat:mission.cat, type:mission.taskType,
+    skills:mission.skills, status:"abandoned", reason, source: source||"daily", minutes:0,
+    mission: mission
+  });
+  if(source==="daily" || source==="project"){ S.dailyMission.status = "abandoned"; }
+  saveState();
+}
+
+function startProject(templateId){
+  if(S.projects.some(p=>p.templateId===templateId && !p.completedDate)) return null;
+  const project = buildProjectBrief(templateId);
+  S.projects.push(project);
+  saveState();
+  return project;
+}
+
+/* ===================== RENDER HELPERS ===================== */
+
+function el(html){ const t=document.createElement("template"); t.innerHTML=html.trim(); return t.content.firstChild; }
+function fmtDate(ds){ const d=new Date(ds+"T00:00:00"); return d.toLocaleDateString(undefined,{month:"short",day:"numeric"}); }
+function catColor(cat){ return CATS[cat].color; }
+function typeLabel(t){ return {study:"Study",practice:"Practice",recreate:"Recreate",create:"Create",experiment:"Experiment",project:"Project",recovery:"Recovery"}[t]||t; }
+
+function diffDots(n){
+  let s='<span class="diff-dots">';
+  for(let i=1;i<=5;i++) s += `<span class="${i<=n?"on":""}"></span>`;
+  return s+"</span>";
+}
+
+function showToast(msg){
+  const existing = document.querySelector(".toast");
+  if(existing) existing.remove();
+  const t = el(`<div class="toast">${msg}</div>`);
+  document.body.appendChild(t);
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(()=>t.remove(), 3200);
+}
+
+function daysActiveTotal(){ return daysBetween(S.startDate, todayStr()) + 1; }
+
+/* ===================== VIEWS ===================== */
+
+function renderTopbar(){
+  const streaks = computeStreaks();
+  const tabs = [["today","Today"],["skills","Skills"],["progress","Progress"],["projects","Projects"],["history","History"]];
+  return `
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="wordmark">STUDIO<span class="slash">/</span>DAILY</div>
+      <div class="row" style="align-items:center;gap:12px;">
+        <div class="daybadge"><span class="dot"></span>DAY ${daysActiveTotal()} · ${streaks.current} streak</div>
+        <button class="theme-toggle" id="theme-btn">${S.theme==="light"?"☾":"☀"}</button>
+      </div>
+    </div>
+    <div class="topbar-row2">
+      <nav class="nav">
+        ${tabs.map(([k,l])=>`<button data-view="${k}" class="${S.view===k?"active":""}">${l}</button>`).join("")}
+      </nav>
+    </div>
+  </div>`;
+}
+
+function renderMissionRichContent(m){
+  return `
+    <div class="m-block">
+      <div class="m-block-label">The challenge</div>
+      <p class="direction-text">${m.scenario}</p>
+      <p class="direction-text" style="margin-top:8px;"><strong>Deliverable:</strong> ${m.deliverable}</p>
+    </div>
+    <div class="m-block">
+      <div class="m-block-label">Constraints</div>
+      <ul class="constraint-list">${m.constraints.map(c=>`<li>${c}</li>`).join("")}</ul>
+    </div>
+    <div class="m-block">
+      <div class="m-block-label">Your direction</div>
+      <p class="direction-text">${m.direction}</p>
+    </div>
+    ${m.focus && m.focus.length ? `
+    <div class="m-block">
+      <div class="m-block-label">Things to focus on</div>
+      <div class="ref-chips">${m.focus.map(f=>`<span class="ref-chip">${f}</span>`).join("")}</div>
+    </div>` : ""}
+    ${m.approaches && m.approaches.length ? `
+    <details class="m-details">
+      <summary>Possible approaches</summary>
+      <div class="inner">
+        <ul class="approach-list">${m.approaches.map(a=>`<li>${a}</li>`).join("")}</ul>
+        <p class="direction-text" style="margin-top:8px;">Pick one direction, or invent your own.</p>
+      </div>
+    </details>` : ""}
+    ${m.process && m.process.length ? `
+    <details class="m-details">
+      <summary>Suggested process</summary>
+      <div class="inner">
+        <ul class="process-list">${m.process.map(([step,mins])=>`<li><span>${step}</span><span class="pt">${mins} min</span></li>`).join("")}</ul>
+      </div>
+    </details>` : ""}
+    ${m.references && m.references.length ? `
+    <details class="m-details">
+      <summary>Inspiration</summary>
+      <div class="inner">
+        <div class="ref-chips">${m.references.map(r=>`<span class="ref-chip">${r}</span>`).join("")}</div>
+      </div>
+    </details>` : ""}
+    ${m.extraChallenge ? `
+    <div class="extra-callout">
+      <b>Optional extra challenge</b>${m.extraChallenge}
+    </div>` : ""}
+  `;
+}
+
+let todayAskingTime = false; // true once user picked "work on project" and we need a time bucket
+
+function renderTodayChoice(){
+  const project = S.projects.find(p=>!p.completedDate);
+  if(todayAskingTime){
+    return `
+    <div class="wrap">
+      <h2 style="font-size:22px;margin:26px 0 4px;">How much time do you have?</h2>
+      <p class="muted" style="font-size:13px;">For "${project.title}" — ${currentMilestone(project).label}</p>
+      <div class="time-chip-row">
+        ${TIME_BUCKETS.map(b=>`<button class="chip${S.lastProjectTimeChoice===b.key?" selected":""}" data-time-key="${b.key}">${b.label}</button>`).join("")}
+      </div>
+    </div>`;
+  }
+  return `
+  <div class="wrap">
+    <h2 style="font-size:22px;margin:26px 0 4px;">Today's practice</h2>
+    <p class="muted" style="font-size:13px;">What do you want to work on?</p>
+    <div class="choice-cards">
+      <div class="choice-card" id="choice-general">
+        <h3>General Daily Brief</h3>
+        <p>A normal daily mission, unrelated to your active project — keep other skills moving.</p>
+      </div>
+      <div class="choice-card" id="choice-project">
+        <h3>Work on Active Project</h3>
+        <p>"${project.title}" — currently on ${currentMilestone(project).label}.</p>
+      </div>
+    </div>
+  </div>`;
+}
+
+function renderToday(){
+  ensureDailyMission();
+  if(!S.dailyMission){ return renderTodayChoice(); }
+  const dm = S.dailyMission;
+  const m = dm.mission;
+  const isDone = dm.status==="completed";
+  const isAbandoned = dm.status==="abandoned";
+  const mode = dm.mode;
+  const time = mode==="minimum" ? m.minTime : m.time;
+
+  let recoveryHtml = "";
+  if(dm.recovery && !isDone && !isAbandoned){
+    recoveryHtml = `<div class="recovery-banner"><b>Welcome back.</b>Don't try to catch up on missed days — today's mission is short on purpose. Just continue.</div>`;
+  }
+
+  let statusHtml = "";
+  if(isDone){
+    statusHtml = `<div class="tag" style="background:var(--green-soft);color:var(--green);border-color:transparent;">Completed today</div>`;
+  } else if(isAbandoned){
+    statusHtml = `<div class="tag" style="background:var(--orange-soft);color:var(--orange);border-color:transparent;">Marked as skipped today</div>`;
+  }
+
+  const actionsHtml = (isDone || isAbandoned) ? `` : `
+    <div class="mission-actions">
+      <button class="btn btn-primary" id="complete-daily">Mark complete</button>
+      <button class="btn btn-ghost" id="help-daily">I need help</button>
+      <button class="btn btn-ghost" id="abandon-daily">Abandon mission</button>
+    </div>
+    <label class="min-toggle">
+      <input type="checkbox" id="min-mode-toggle" ${mode==="minimum"?"checked":""}/>
+      Switch to Minimum Mode — a smaller version for low-energy days
+    </label>`;
+
+  const extrasHtml = renderExtras();
+
+  return `
+  <div class="wrap">
+    ${statusHtml}
+    <div class="mission-shell" style="--accent:${catColor(m.cat)}">
+      <div class="card mission-card">
+        <div class="mission-eyebrow">
+          <span class="mission-kicker">${typeLabel(dm.recovery?"recovery":m.taskType)} · ${CATS[m.cat].label}</span>
+          <span class="tag">${m.skills.map(s=>(S.skills[s]&&S.skills[s].name)||s).join(" · ")}</span>
+        </div>
+        <h1 class="mission-title">${m.title}</h1>
+        <p class="m-goal">${m.goal}</p>
+        <div class="mission-meta">
+          <div class="meta-item"><span class="k">Estimated</span>${time} min</div>
+          <div class="meta-item"><span class="k">Difficulty</span>${diffDots(m.diff)}</div>
+          <div class="meta-item"><span class="k">Mode</span>${mode==="minimum"?"Minimum":"Normal"}</div>
+        </div>
+        ${mode==="minimum" ? `<p class="direction-text" style="margin-bottom:8px;">${m.minDesc}</p>` : renderMissionRichContent(m)}
+        ${recoveryHtml}
+        ${actionsHtml}
+      </div>
+    </div>
+    ${extrasHtml}
+  </div>`;
+}
+
+function renderExtras(){
+  /* Extra missions use the exact same buildConcreteMission() schema as the
+     Daily Mission, and now render through the same renderMissionRichContent()
+     helper, so they carry identical depth — goal, constraints, direction,
+     process, approaches, references, extra challenge. */
+  const activeExtras = S.extraMissions.map(inst=>{
+    const m = inst.mission;
+    return `
+    <div class="extra-mission-card" style="--accent:${catColor(m.cat)}">
+      <div class="mission-eyebrow">
+        <span class="mission-kicker">${inst.kind.toUpperCase()}${inst.kind==="harder"?` · LEVEL ${m.level}`:""} · ${CATS[m.cat].label}</span>
+        <span class="tag">${diffDots(m.diff)}</span>
+      </div>
+      <h3 style="font-size:19px;margin-bottom:4px;">${m.title}</h3>
+      <p class="m-goal" style="margin-bottom:4px;">${m.goal}</p>
+      <div class="mission-meta" style="margin-bottom:2px;">
+        <div class="meta-item"><span class="k">Estimated</span>${m.time} min</div>
+        <div class="meta-item"><span class="k">Difficulty</span>${diffDots(m.diff)}</div>
+        <div class="meta-item"><span class="k">Skill</span>${m.skills.map(s=>(S.skills[s]&&S.skills[s].name)||s).join(" · ")}</div>
+      </div>
+      ${renderMissionRichContent(m)}
+      <div class="row" style="align-items:center;margin-top:14px;">
+        <button class="btn btn-sm btn-primary" data-complete-extra="${inst.uid}">Mark complete</button>
+        <button class="btn btn-sm btn-ghost" data-dismiss-extra="${inst.uid}">Dismiss</button>
+      </div>
+    </div>`;
+  }).join("");
+
+  return `
+  <div class="section-title" style="margin-top:34px;">More, if you want it</div>
+  <div class="extras-row">
+    <button class="extra-btn" id="btn-extra-open">
+      <div class="t">+ Give me another challenge</div>
+      <div class="d">Optional. The daily mission above is already a full day.</div>
+    </button>
+    <button class="extra-btn" id="btn-skill-open">
+      <div class="t">🎯 Practice a specific skill</div>
+      <div class="d">Line art, anatomy, textures, color, composition, typography, poses.</div>
+    </button>
+    <button class="extra-btn" id="btn-bored">
+      <div class="t">🧠 I'm bored — give me something</div>
+      <div class="d">A creative challenge, coach's pick.</div>
+    </button>
+  </div>
+  <div id="extra-choice-slot"></div>
+  ${activeExtras}
+  `;
+}
+
+function renderSkillFocusPop(){
+  return `
+  <div class="choice-pop">
+    <div class="section-title" style="margin-bottom:4px;">Which skill?</div>
+    <div class="choice-grid">
+      ${SKILL_FOCUS_TAGS.map(f=>`<button class="chip" data-skill-tag="${f.tag}">${f.label}</button>`).join("")}
+    </div>
+  </div>`;
+}
+
+function renderExtraChoicePop(){
+  return `
+  <div class="choice-pop">
+    <div class="section-title" style="margin-bottom:4px;">What kind of challenge?</div>
+    <div class="choice-grid">
+      <button class="chip" data-extra-kind="similar">Similar</button>
+      <button class="chip" data-extra-kind="harder">Harder</button>
+      <button class="chip" data-extra-kind="different">Different skill</button>
+      <button class="chip" data-extra-kind="random">Random</button>
+      <button class="chip" data-extra-kind="creative">Creative challenge</button>
+    </div>
+  </div>`;
+}
+
+function renderSkills(){
+  let html = `<div class="wrap"><h2 style="font-size:24px;margin:26px 0 6px;">Skill tree</h2><p class="muted" style="margin-bottom:26px;font-size:13.5px;">Levels grow from completed missions. Nothing decays — this only ever goes up.</p>`;
+  SKILL_GROUP_ORDER.forEach(cat=>{
+    const items = SKILL_DEFS.filter(s=>s[2]===cat);
+    html += `<div class="skill-cat">
+      <div class="skill-cat-head"><span class="cat-swatch" style="background:${CATS[cat].color}"></span><h3 style="font-size:15px;">${CATS[cat].label}</h3></div>
+      <div class="card" style="padding:6px 18px;">`;
+    items.forEach(([id,name])=>{
+      const sk = S.skills[id];
+      const pct = sk.level>=10 ? 100 : Math.min(100, ((sk.xp % 40)/40)*100);
+      html += `<div class="skill-row">
+        <div class="skill-name">${name}</div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" style="width:${pct}%;background:${CATS[cat].color}"></div></div>
+        <div class="skill-lvl">Lv ${sk.level}</div>
+      </div>`;
+    });
+    html += `</div></div>`;
+  });
+  html += `</div>`;
+  return html;
+}
+
+function renderProgress(){
+  const t = totalStats();
+  const streaks = computeStreaks();
+  const month = computeMonthStats();
+  const hrs = Math.floor(t.minutes/60), mins = t.minutes%60;
+  return `
+  <div class="wrap">
+    <h2 style="font-size:24px;margin:26px 0 18px;">Progress</h2>
+    <div class="grid-3">
+      <div class="card stat"><div class="n">${streaks.current}</div><div class="l">Current streak</div></div>
+      <div class="card stat"><div class="n">${streaks.longest}</div><div class="l">Longest streak</div></div>
+      <div class="card stat"><div class="n">${month.consistency}%</div><div class="l">Consistency this month</div></div>
+      <div class="card stat"><div class="n">${t.missions}</div><div class="l">Missions completed</div></div>
+      <div class="card stat"><div class="n">${hrs}h ${mins}m</div><div class="l">Total practice time</div></div>
+      <div class="card stat"><div class="n">${t.projectsCompleted}</div><div class="l">Projects completed</div></div>
+    </div>
+
+    <div class="section-title" style="margin-top:30px;">This month</div>
+    <div class="card" style="padding:18px;">
+      <div style="font-size:13.5px;">${month.completedDays} / ${month.elapsed} days completed · ${Math.floor(month.minutes/60)}h ${month.minutes%60}m practiced</div>
+      <div class="month-strip">
+        ${month.cells.map(c=>`<div class="day-cell ${c.hit?"hit":""}" title="${c.ds}" style="opacity:${c.future?0.35:1}"></div>`).join("")}
+      </div>
+    </div>
+
+    <div class="section-title" style="margin-top:30px;">Skill snapshot</div>
+    <div class="card" style="padding:6px 18px;">
+      ${SKILL_DEFS.slice().sort((a,b)=>S.skills[b[0]].level-S.skills[a[0]].level).slice(0,6).map(([id,name,cat])=>{
+        const sk = S.skills[id];
+        return `<div class="skill-row"><div class="skill-name">${name}</div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" style="width:${Math.min(100,((sk.xp%40)/40)*100)}%;background:${CATS[cat].color}"></div></div>
+        <div class="skill-lvl">Lv ${sk.level}</div></div>`;
+      }).join("")}
+    </div>
+
+    <div class="section-title" style="margin-top:30px;">Danger zone</div>
+    <div class="card" style="padding:18px;">
+      <p class="muted" style="font-size:12.5px;margin-bottom:12px;">Permanently erase your streak, skill levels, mission history, and all projects. This can't be undone.</p>
+      <button class="btn btn-sm" style="border-color:var(--orange);color:var(--orange);" id="btn-open-reset">Reset all progress &amp; history</button>
+    </div>
+  </div>`;
+}
+
+function projectPercent(p){
+  const ms = Array.isArray(p.milestones) ? p.milestones : [];
+  if(!ms.length) return 0;
+  return Math.round(ms.reduce((s,m)=>s+(m.percent||0),0)/ms.length);
+}
+
+function renderProjectBriefContent(p){
+  return `
+    <div class="m-block">
+      <div class="m-block-label">Overview</div>
+      <p class="direction-text">${p.overview}</p>
+    </div>
+    <div class="proj-meta-row">
+      <span><b>Duration</b> ${p.durationDays} days</span>
+      <span><b>Estimated</b> ${p.estimatedHours} hrs</span>
+      <span><b>Audience</b> ${p.audience}</span>
+    </div>
+    <div class="m-block"><div class="m-block-label">Creative direction</div><p class="direction-text">${p.direction}</p></div>
+    <div class="m-block"><div class="m-block-label">Deliverables</div><ul class="constraint-list">${p.deliverables.map(d=>`<li>${d}</li>`).join("")}</ul></div>
+    <div class="m-block"><div class="m-block-label">Constraints</div><ul class="constraint-list">${p.constraints.map(c=>`<li>${c}</li>`).join("")}</ul></div>
+    <div class="m-block"><div class="m-block-label">Color direction</div><p class="direction-text">${p.colorDirection}</p></div>
+    ${p.typographyDirection?`<div class="m-block"><div class="m-block-label">Typography direction</div><p class="direction-text">${p.typographyDirection}</p></div>`:""}
+    <details class="m-details"><summary>Possible approaches</summary><div class="inner"><ul class="approach-list">${p.approaches.map(a=>`<li>${a}</li>`).join("")}</ul></div></details>
+    <details class="m-details"><summary>Inspiration</summary><div class="inner"><div class="ref-chips">${p.references.map(r=>`<span class="ref-chip">${r}</span>`).join("")}</div></div></details>
+    <details class="m-details"><summary>Suggested process</summary><div class="inner"><ul class="process-list">${p.process.map(([step,hrs])=>`<li><span>${step}</span><span class="pt">${hrs}h</span></li>`).join("")}</ul></div></details>
+    <div class="m-block"><div class="m-block-label">Success criteria</div><ul class="constraint-list">${p.successCriteria.map(s=>`<li>${s}</li>`).join("")}</ul></div>
+    ${p.extraChallenge?`<div class="extra-callout"><b>Optional extra challenge</b>${p.extraChallenge}</div>`:""}
+  `;
+}
+
+const JOURNAL_CATEGORIES = ["Research","Concept","Sketch","Iteration","Problem","Solution","Decision","Feedback","Final","Other"];
+
+function renderProjects(){
+  let html = `<div class="wrap"><h2 style="font-size:24px;margin:26px 0 6px;">Projects</h2>
+  <p class="muted" style="font-size:13.5px;margin-bottom:10px;">Optional. A project is a larger real assignment you explicitly choose to start — it never gets assigned automatically.</p>`;
+
+  if(S.projects.length===0){
+    html += `<div class="card empty">No projects yet. Start one below when you want to go deeper on something real.</div>`;
+  }
+
+  S.projects.forEach(p=>{
+    const pct = projectPercent(p);
+    html += `<div class="card project-card">
+      <div class="project-head">
+        <div>
+          <h3 style="font-size:18px;">${p.title}</h3>
+          <div class="muted" style="font-size:12.5px;margin-top:2px;">${p.typeLabel} · ${p.client}${p.completedDate?` · completed ${fmtDate(p.completedDate)}`:""}</div>
+        </div>
+        <span class="tag">${pct}%</span>
+      </div>
+      <div class="proj-progress-track"><div class="proj-progress-fill" style="width:${pct}%;"></div></div>
+
+      <details class="m-details"><summary>Project brief</summary><div class="inner project-detail">${renderProjectBriefContent(p)}</div></details>
+
+      <div class="m-block">
+        <div class="m-block-label">Milestones</div>
+        <div class="milestone-list">
+          ${p.milestones.map(m=>{
+            const dotClass = m.percent>=100?"done":(m.percent>0?"active":"");
+            return `<div class="milestone-row ${m.percent>=100?"done":""}" data-milestone="${p.id}:${m.id}">
+              <span class="milestone-dot ${dotClass}"></span>
+              <span class="milestone-label">${m.label}</span>
+              <span class="milestone-pct">${m.percent}%</span>
+            </div>`;
+          }).join("")}
+        </div>
+      </div>
+
+      <details class="m-details"><summary>Process journal (${p.journal.length})</summary><div class="inner">
+        ${p.journal.length ? p.journal.slice().reverse().map(j=>`
+          <div class="journal-entry">
+            <div class="je-head"><span class="journal-cat">${j.category}</span><span class="journal-date">${fmtDate(j.date)}</span></div>
+            <div class="journal-notes">${j.notes}</div>
+            ${j.thumb?`<img class="hist-thumb-lg" style="max-width:200px;margin-top:8px;" src="${j.thumb}"/>`:""}
+          </div>`).join("") : `<p class="muted" style="font-size:13px;">No entries yet.</p>`}
+        <div class="je-form" style="margin-top:14px;">
+          <div class="choice-grid" data-journal-cat-group="${p.id}">
+            ${JOURNAL_CATEGORIES.map((c,i)=>`<button class="chip${i===0?" selected":""}" data-journal-cat="${c}">${c}</button>`).join("")}
+          </div>
+          <textarea rows="3" placeholder="What happened in this step?" data-journal-notes="${p.id}"></textarea>
+          <div class="file-row"><label>Optional image — <input type="file" accept="image/*" data-journal-file="${p.id}"/></label></div>
+          <button class="btn btn-sm btn-primary" style="margin-top:10px;" data-journal-add="${p.id}">Add entry</button>
+        </div>
+      </div></details>
+    </div>`;
+  });
+
+  if(!hasActiveProject()){
+    html += `<div class="section-title" style="margin-top:24px;">+ Start a project</div>
+    <p class="muted" style="font-size:12.5px;margin-bottom:6px;">Pick the kind of assignment you want.</p>
+    <div class="grid-2">`;
+    PROJECT_TEMPLATES.forEach(t=>{
+      html += `<div class="card" style="padding:18px;">
+        <h3 style="font-size:15px;margin-bottom:4px;">${t.title}</h3>
+        <p class="muted" style="font-size:12px;margin-bottom:10px;">${t.typeLabel} · ${t.durationDays} days · ${t.estimatedHours} hrs</p>
+        <button class="btn btn-sm" data-start-project="${t.id}">Start this project</button>
+      </div>`;
+    });
+    html += `</div>`;
+  } else {
+    html += `<p class="muted" style="font-size:12.5px;margin-top:10px;">Finish or wrap up your active project before starting another.</p>`;
+  }
+
+  html += `</div>`;
+  return html;
+}
+
+function renderHistory(){
+  const items = S.history.slice().reverse();
+  let html = `<div class="wrap"><h2 style="font-size:24px;margin:26px 0 18px;">History</h2>`;
+  if(items.length===0){
+    html += `<div class="card empty">Nothing here yet — your completed and skipped missions will show up as you go.</div>`;
+  } else {
+    html += `<div class="card" style="padding:6px 22px;">`;
+    items.forEach(h=>{
+      const statusClass = h.status==="completed"?"status-completed":(h.status==="abandoned"?"status-abandoned":"status-extra");
+      html += `<div class="hist-item" data-history-id="${h.id}">
+        <div class="hist-date">${fmtDate(h.date)}</div>
+        ${h.thumb?`<img class="hist-thumb" src="${h.thumb}"/>`:""}
+        <div class="hist-body">
+          <div class="hist-title">${h.title} <span class="status-pill ${statusClass}">${h.status}</span></div>
+          <div class="muted" style="font-size:12.5px;">${typeLabel(h.type)} · ${CATS[h.cat].label}${h.status==="completed"?` · ${h.minutes} min · ${h.mode==="minimum"?"minimum mode":"normal"}`:""}${h.status==="abandoned"?` · ${h.reason||""}`:""}</div>
+          ${h.notes?`<div style="font-size:13px;margin-top:5px;color:var(--ink-soft);">"${h.notes}"</div>`:""}
+        </div>
+      </div>`;
+    });
+    html += `</div>`;
+  }
+  html += `</div>`;
+  return html;
+}
+
+/* ===================== MODALS ===================== */
+
+let modalState = null;
+
+function renderModal(){
+  if(!modalState) return "";
+  if(modalState.kind==="historyDetail"){
+    const h = modalState.entry;
+    const m = h.mission;
+    const statusClass = h.status==="completed"?"status-completed":(h.status==="abandoned"?"status-abandoned":"status-extra");
+    return `
+    <div class="overlay" id="modal-overlay">
+      <div class="modal modal-wide" style="position:relative;">
+        <button class="close-x" id="modal-close">✕</button>
+        <div class="mission-kicker" style="color:${catColor(h.cat)};margin-bottom:6px;">${typeLabel(h.type)} · ${CATS[h.cat].label}</div>
+        <h3 style="font-size:21px;margin-bottom:4px;">${h.title} <span class="status-pill ${statusClass}" style="margin-left:4px;">${h.status}</span></h3>
+        ${m && m.goal ? `<p class="m-goal">${m.goal}</p>` : ""}
+        <div class="modal-meta-strip">
+          <span><b>Date:</b> ${fmtDate(h.date)}</span>
+          ${m ? `<span><b>Difficulty:</b> ${diffDots(m.diff)}</span>` : ""}
+          ${m ? `<span><b>Estimated:</b> ${m.time} min (min ${m.minTime})</span>` : ""}
+          ${h.status==="completed" ? `<span><b>Actual:</b> ${h.minutes} min · ${h.mode==="minimum"?"minimum mode":"normal"}</span>` : ""}
+          ${h.status==="abandoned" ? `<span><b>Reason:</b> ${h.reason||"—"}</span>` : ""}
+          <span><b>Skill:</b> ${h.skills.map(s=>(S.skills[s]&&S.skills[s].name)||s).join(" · ")}</span>
+        </div>
+        ${m ? renderMissionRichContent(m) : `<p class="muted" style="font-size:13px;">No saved brief snapshot for this older entry.</p>`}
+        ${(h.perceived || h.notes) ? `
+        <div class="m-block">
+          <div class="m-block-label">Your reflection</div>
+          ${m && m.reflection ? `<p class="reflect-q">${m.reflection}</p>` : ""}
+          ${h.perceived ? `<p class="direction-text"><strong>Felt like:</strong> ${h.perceived}</p>` : ""}
+          ${h.notes ? `<p class="direction-text" style="margin-top:6px;">"${h.notes}"</p>` : ""}
+        </div>` : ""}
+        ${h.thumb ? `
+        <div class="m-block">
+          <div class="m-block-label">Your artwork</div>
+          <img class="hist-thumb-lg" src="${h.thumb}"/>
+        </div>` : ""}
+        <div class="modal-actions">
+          <button class="btn btn-primary" id="modal-close-2">Close</button>
+        </div>
+      </div>
+    </div>`;
+  }
+  if(modalState.kind==="reflect"){
+    const opts = ["Too easy","Good","Difficult","Too difficult"];
+    const m = modalState.mission;
+    return `
+    <div class="overlay" id="modal-overlay">
+      <div class="modal" style="position:relative;">
+        <button class="close-x" id="modal-close">✕</button>
+        <h3>How did that feel?</h3>
+        <div class="choice-grid" id="reflect-diff">
+          ${opts.map(o=>`<button class="chip" data-diff="${o}">${o}</button>`).join("")}
+        </div>
+        <div class="row">
+          ${m.reflection ? `<p class="reflect-q" style="margin-top:14px;">${m.reflection}</p>` : ""}
+          <textarea id="reflect-notes" rows="3" placeholder="Your answer (optional)"></textarea>
+        </div>
+        <div class="file-row">
+          <label>Upload the artwork (optional) — <input type="file" id="reflect-file" accept="image/*"/></label>
+        </div>
+        <div class="modal-actions">
+          <button class="btn btn-ghost" id="reflect-skip">Skip</button>
+          <button class="btn btn-primary" id="reflect-save">Save & finish</button>
+        </div>
+      </div>
+    </div>`;
+  }
+  if(modalState.kind==="abandon"){
+    const reasons = ["No time","No energy","Too difficult","Don't feel like it","Other"];
+    return `
+    <div class="overlay" id="modal-overlay">
+      <div class="modal" style="position:relative;">
+        <button class="close-x" id="modal-close">✕</button>
+        <h3>What's getting in the way?</h3>
+        <p class="muted" style="font-size:13px;margin-bottom:4px;">No judgment — this just helps the app plan better next time.</p>
+        <div class="choice-grid" id="abandon-reason">
+          ${reasons.map(r=>`<button class="chip" data-reason="${r}">${r}</button>`).join("")}
+        </div>
+        <div class="modal-actions">
+          <button class="btn btn-primary" id="abandon-confirm" disabled>Confirm</button>
+        </div>
+      </div>
+    </div>`;
+  }
+  if(modalState.kind==="reset"){
+    return `
+    <div class="overlay" id="modal-overlay">
+      <div class="modal" style="position:relative;">
+        <button class="close-x" id="modal-close">✕</button>
+        <h3>Reset all progress?</h3>
+        <p style="font-size:13.5px;line-height:1.6;color:var(--ink-soft);">
+          This permanently deletes your streak, skill levels, mission history, and all projects — including journal entries and uploaded artwork. This can't be undone.
+        </p>
+        <div class="modal-actions">
+          <button class="btn btn-ghost" id="modal-close-2">Cancel</button>
+          <button class="btn btn-primary" id="reset-confirm" style="background:var(--orange);border-color:var(--orange);">Yes, reset everything</button>
+        </div>
+      </div>
+    </div>`;
+  }
+  if(modalState.kind==="milestone"){
+    const p = S.projects.find(x=>x.id===modalState.projectId);
+    const m = p.milestones.find(x=>x.id===modalState.milestoneId);
+    const percents = [0,33,66,100];
+    return `
+    <div class="overlay" id="modal-overlay">
+      <div class="modal" style="position:relative;">
+        <button class="close-x" id="modal-close">✕</button>
+        <h3>${m.label}</h3>
+        <p class="muted" style="font-size:12.5px;margin-bottom:4px;">${p.title}</p>
+        <div class="choice-grid" id="milestone-pct-group">
+          ${percents.map(v=>`<button class="chip${m.percent===v?" selected":""}" data-milestone-pct="${v}">${v}%</button>`).join("")}
+        </div>
+        <div class="row" style="margin-top:14px;">
+          <textarea id="milestone-notes" rows="4" placeholder="Notes on this milestone...">${m.notes||""}</textarea>
+        </div>
+        <div class="file-row"><label>Add an image — <input type="file" id="milestone-file" accept="image/*"/></label></div>
+        ${m.files && m.files.length ? `<div class="row" style="margin-top:10px;gap:8px;">${m.files.map(f=>`<img class="hist-thumb" src="${f}"/>`).join("")}</div>` : ""}
+        <div class="modal-actions">
+          <button class="btn btn-ghost" id="modal-close-2">Cancel</button>
+          <button class="btn btn-primary" id="milestone-save">Save</button>
+        </div>
+      </div>
+    </div>`;
+  }
+  if(modalState.kind==="help"){
+    return `
+    <div class="overlay" id="modal-overlay">
+      <div class="modal" style="position:relative;">
+        <button class="close-x" id="modal-close">✕</button>
+        <h3>A way in</h3>
+        <p style="font-size:13.5px;line-height:1.6;color:var(--ink-soft);">
+        Stuck is normal — it usually means the first step is too big. Try this instead:
+        </p>
+        <ul style="font-size:13.5px;line-height:1.7;color:var(--ink-soft);padding-left:18px;">
+          <li>Set a timer for 10 minutes and only do the roughest possible sketch.</li>
+          <li>Don't aim for good — aim for finished.</li>
+          <li>If it's still too much, switch to Minimum Mode below.</li>
+        </ul>
+        <div class="modal-actions">
+          <button class="btn btn-ghost" id="modal-to-min">Switch to Minimum Mode</button>
+          <button class="btn btn-primary" id="modal-close-2">Got it</button>
+        </div>
+      </div>
+    </div>`;
+  }
+  return "";
+}
+
+/* ===================== MAIN RENDER ===================== */
+
+function resetAllProgress(){
+  const keepTheme = S ? S.theme : "light";
+  S = defaultState();
+  S.theme = keepTheme;
+  todayAskingTime = false;
+  modalState = null;
+  saveState();
+}
+
+function render(){
+  document.documentElement.setAttribute("data-theme", S.theme);
+  try{
+    let body = "";
+    if(S.view==="today") body = renderToday();
+    else if(S.view==="skills") body = renderSkills();
+    else if(S.view==="progress") body = renderProgress();
+    else if(S.view==="projects") body = renderProjects();
+    else if(S.view==="history") body = renderHistory();
+
+    document.getElementById("app").innerHTML = renderStorageBanner() + renderTopbar() + body + renderModal();
+    bindEvents();
+  }catch(err){
+    /* Last-resort safety net: a render error (e.g. corrupted data from an
+       older version) should never leave the person staring at a blank
+       screen with no way out. Offer a reset instead of failing silently. */
+    document.getElementById("app").innerHTML = `
+      <div class="wrap" style="padding-top:60px;">
+        <div class="card" style="padding:24px;">
+          <h2 style="font-size:19px;margin-bottom:10px;">Something went wrong loading this screen</h2>
+          <p class="muted" style="font-size:13.5px;margin-bottom:16px;">This can happen if saved data got into a bad state. You can try again, or reset all progress and start fresh.</p>
+          <div class="row">
+            <button class="btn btn-ghost" id="error-retry">Try again</button>
+            <button class="btn btn-primary" id="error-reset">Reset all progress</button>
+          </div>
+        </div>
+      </div>`;
+    const retryBtn = document.getElementById("error-retry");
+    if(retryBtn) retryBtn.addEventListener("click",()=>{ S.view="today"; render(); });
+    const resetBtn = document.getElementById("error-reset");
+    if(resetBtn) resetBtn.addEventListener("click",()=>{
+      modalState = {kind:"reset"};
+      render();
+    });
+  }
+}
+
+/* ===================== EVENTS ===================== */
+
+let pendingReflectDiff = null;
+let pendingAbandonReason = null;
+let pendingThumb = null;
+let pendingMilestonePct = null;
+let pendingMilestoneThumb = null;
+let pendingJournalCat = {};    // keyed by projectId
+let pendingJournalThumb = {};  // keyed by projectId
+
+/* shared helper: read an <input type=file>, resize to a small thumbnail
+   dataURL, and hand it to the given callback. Reused by mission reflection,
+   milestone uploads, and journal entries. */
+function readImageThumb(file, maxW, cb){
+  const reader = new FileReader();
+  reader.onload = (ev)=>{
+    const img = new Image();
+    img.onload = ()=>{
+      const scale = Math.min(1, maxW/img.width);
+      const canvas = document.createElement("canvas");
+      canvas.width = img.width*scale; canvas.height = img.height*scale;
+      const ctx = canvas.getContext("2d");
+      ctx.drawImage(img,0,0,canvas.width,canvas.height);
+      cb(canvas.toDataURL("image/jpeg",0.6));
+    };
+    img.src = ev.target.result;
+  };
+  reader.readAsDataURL(file);
+}
+
+function bindEvents(){
+  const app = document.getElementById("app");
+
+  app.querySelectorAll("[data-view]").forEach(b=>b.addEventListener("click",()=>{
+    S.view = b.dataset.view; render();
+  }));
+
+  const dismissStorageBtn = document.getElementById("dismiss-storage-warning");
+  if(dismissStorageBtn) dismissStorageBtn.addEventListener("click",()=>{
+    storageWarningDismissed = true; render();
+  });
+
+  const themeBtn = document.getElementById("theme-btn");
+  if(themeBtn) themeBtn.addEventListener("click",()=>{
+    S.theme = S.theme==="light"?"dark":"light"; saveState(); render();
+  });
+
+  const openResetBtn = document.getElementById("btn-open-reset");
+  if(openResetBtn) openResetBtn.addEventListener("click",()=>{
+    modalState = {kind:"reset"};
+    render();
+  });
+  const resetConfirmBtn = document.getElementById("reset-confirm");
+  if(resetConfirmBtn) resetConfirmBtn.addEventListener("click",()=>{
+    resetAllProgress();
+    modalState = null;
+    S.view = "today";
+    render();
+    showToast("Everything's been reset. Fresh start.");
+  });
+
+  const choiceGeneral = document.getElementById("choice-general");
+  if(choiceGeneral) choiceGeneral.addEventListener("click",()=>{
+    generateGeneralDailyMission();
+    render();
+  });
+  const choiceProject = document.getElementById("choice-project");
+  if(choiceProject) choiceProject.addEventListener("click",()=>{
+    todayAskingTime = true;
+    render();
+  });
+  app.querySelectorAll("[data-time-key]").forEach(b=>b.addEventListener("click",()=>{
+    const project = S.projects.find(p=>!p.completedDate);
+    chooseProjectDailyMission(project, b.dataset.timeKey);
+    todayAskingTime = false;
+    render();
+  }));
+
+  const minToggle = document.getElementById("min-mode-toggle");
+  if(minToggle) minToggle.addEventListener("change",()=>{
+    S.dailyMission.mode = minToggle.checked ? "minimum":"normal";
+    saveState(); render();
+  });
+
+  const completeBtn = document.getElementById("complete-daily");
+  if(completeBtn) completeBtn.addEventListener("click",()=>{
+    const dm = S.dailyMission;
+    modalState = {kind:"reflect", mission:dm.mission, source: dm.origin==="project" ? "project" : "daily",
+      mode:dm.mode, projectId: dm.projectId||null, milestoneId: dm.milestoneId||null};
+    pendingReflectDiff=null; pendingThumb=null;
+    render();
+  });
+
+  const abandonBtn = document.getElementById("abandon-daily");
+  if(abandonBtn) abandonBtn.addEventListener("click",()=>{
+    const dm = S.dailyMission;
+    modalState = {kind:"abandon", mission:dm.mission, source: dm.origin==="project" ? "project" : "daily"};
+    pendingAbandonReason=null;
+    render();
+  });
+
+  const helpBtn = document.getElementById("help-daily");
+  if(helpBtn) helpBtn.addEventListener("click",()=>{
+    modalState = {kind:"help"};
+    render();
+  });
+
+  const extraOpenBtn = document.getElementById("btn-extra-open");
+  if(extraOpenBtn) extraOpenBtn.addEventListener("click",()=>{
+    const slot = document.getElementById("extra-choice-slot");
+    slot.innerHTML = slot.innerHTML ? "" : renderExtraChoicePop();
+    slot.querySelectorAll("[data-extra-kind]").forEach(b=>b.addEventListener("click",()=>{
+      generateExtra(b.dataset.extraKind);
+      slot.innerHTML = "";
+      render();
+      showToast("New challenge added below ✦");
+    }));
+  });
+
+  const skillOpenBtn = document.getElementById("btn-skill-open");
+  if(skillOpenBtn) skillOpenBtn.addEventListener("click",()=>{
+    const slot = document.getElementById("extra-choice-slot");
+    slot.innerHTML = slot.innerHTML ? "" : renderSkillFocusPop();
+    slot.querySelectorAll("[data-skill-tag]").forEach(b=>b.addEventListener("click",()=>{
+      generateExtra("skill:"+b.dataset.skillTag);
+      slot.innerHTML = "";
+      render();
+      showToast("Focused exercise added below ✦");
+    }));
+  });
+
+  const boredBtn = document.getElementById("btn-bored");
+  if(boredBtn) boredBtn.addEventListener("click",()=>{
+    generateBored();
+    render();
+    showToast("I have an idea for you ✦");
+  });
+
+  app.querySelectorAll("[data-complete-extra]").forEach(b=>b.addEventListener("click",()=>{
+    const uid = b.dataset.completeExtra;
+    const inst = S.extraMissions.find(x=>x.uid===uid);
+    modalState = {kind:"reflect", mission:inst.mission, source:"extra", extraUid:uid, mode:"normal"};
+    pendingReflectDiff=null; pendingThumb=null;
+    render();
+  }));
+  app.querySelectorAll("[data-dismiss-extra]").forEach(b=>b.addEventListener("click",()=>{
+    S.extraMissions = S.extraMissions.filter(x=>x.uid!==b.dataset.dismissExtra);
+    saveState(); render();
+  }));
+
+  app.querySelectorAll("[data-history-id]").forEach(row=>row.addEventListener("click",()=>{
+    const entry = S.history.find(h=>h.id===row.dataset.historyId);
+    if(entry){ modalState = {kind:"historyDetail", entry}; render(); }
+  }));
+
+  app.querySelectorAll("[data-start-project]").forEach(b=>b.addEventListener("click",()=>{
+    startProject(b.dataset.startProject); render();
+  }));
+
+  app.querySelectorAll("[data-milestone]").forEach(row=>row.addEventListener("click",()=>{
+    const [projectId, milestoneId] = row.dataset.milestone.split(":");
+    modalState = {kind:"milestone", projectId, milestoneId};
+    const p = S.projects.find(x=>x.id===projectId);
+    const m = p.milestones.find(x=>x.id===milestoneId);
+    pendingMilestonePct = m.percent; pendingMilestoneThumb = null;
+    render();
+  }));
+
+  app.querySelectorAll("[data-journal-cat]").forEach(b=>b.addEventListener("click",()=>{
+    const group = b.closest("[data-journal-cat-group]");
+    const pid = group.dataset.journalCatGroup;
+    pendingJournalCat[pid] = b.dataset.journalCat;
+    group.querySelectorAll("[data-journal-cat]").forEach(x=>x.classList.remove("selected"));
+    b.classList.add("selected");
+  }));
+  app.querySelectorAll("[data-journal-file]").forEach(inp=>inp.addEventListener("change",(e)=>{
+    const pid = inp.dataset.journalFile;
+    const file = e.target.files[0];
+    if(!file) return;
+    readImageThumb(file, 220, (dataUrl)=>{ pendingJournalThumb[pid] = dataUrl; showToast("Image attached"); });
+  }));
+  app.querySelectorAll("[data-journal-add]").forEach(b=>b.addEventListener("click",()=>{
+    const pid = b.dataset.journalAdd;
+    const notesEl = document.querySelector(`[data-journal-notes="${pid}"]`);
+    const category = pendingJournalCat[pid] || JOURNAL_CATEGORIES[0];
+    const notes = notesEl ? notesEl.value.trim() : "";
+    if(!notes && !pendingJournalThumb[pid]){ showToast("Add a note or an image first"); return; }
+    addJournalEntry(pid, {category, notes, thumb: pendingJournalThumb[pid]||null});
+    delete pendingJournalThumb[pid];
+    render();
+    showToast("Journal entry added");
+  }));
+
+  const overlay = document.getElementById("modal-overlay");
+  const closeX = document.getElementById("modal-close");
+  const closeBtn2 = document.getElementById("modal-close-2");
+  [closeX, closeBtn2].forEach(b=>{ if(b) b.addEventListener("click",()=>{ modalState=null; render(); }); });
+  if(overlay) overlay.addEventListener("click",(e)=>{ if(e.target===overlay){ modalState=null; render(); } });
+
+  const modalToMin = document.getElementById("modal-to-min");
+  if(modalToMin) modalToMin.addEventListener("click",()=>{
+    S.dailyMission.mode="minimum"; saveState(); modalState=null; render();
+  });
+
+  if(modalState && modalState.kind==="reflect"){
+    app.querySelectorAll("[data-diff]").forEach(b=>b.addEventListener("click",()=>{
+      pendingReflectDiff = b.dataset.diff;
+      app.querySelectorAll("[data-diff]").forEach(x=>x.classList.remove("selected"));
+      b.classList.add("selected");
+    }));
+    const fileInput = document.getElementById("reflect-file");
+    if(fileInput) fileInput.addEventListener("change",(e)=>{
+      const file = e.target.files[0];
+      if(!file) return;
+      const reader = new FileReader();
+      reader.onload = (ev)=>{
+        const img = new Image();
+        img.onload = ()=>{
+          const maxW = 200;
+          const scale = Math.min(1, maxW/img.width);
+          const canvas = document.createElement("canvas");
+          canvas.width = img.width*scale; canvas.height = img.height*scale;
+          const ctx = canvas.getContext("2d");
+          ctx.drawImage(img,0,0,canvas.width,canvas.height);
+          pendingThumb = canvas.toDataURL("image/jpeg",0.6);
+          showToast("Artwork attached");
+        };
+        img.src = ev.target.result;
+      };
+      reader.readAsDataURL(file);
+    });
+    const skip = document.getElementById("reflect-skip");
+    if(skip) skip.addEventListener("click",()=>{ finishReflect(true); });
+    const save = document.getElementById("reflect-save");
+    if(save) save.addEventListener("click",()=>{ finishReflect(false); });
+  }
+
+  if(modalState && modalState.kind==="abandon"){
+    app.querySelectorAll("[data-reason]").forEach(b=>b.addEventListener("click",()=>{
+      pendingAbandonReason = b.dataset.reason;
+      app.querySelectorAll("[data-reason]").forEach(x=>x.classList.remove("selected"));
+      b.classList.add("selected");
+      document.getElementById("abandon-confirm").disabled = false;
+    }));
+    const confirmBtn = document.getElementById("abandon-confirm");
+    if(confirmBtn) confirmBtn.addEventListener("click",()=>{
+      abandonMission({mission:modalState.mission, reason:pendingAbandonReason, source:modalState.source});
+      modalState = null;
+      render();
+      showToast("No worries. See you tomorrow.");
+    });
+  }
+
+  if(modalState && modalState.kind==="milestone"){
+    app.querySelectorAll("[data-milestone-pct]").forEach(b=>b.addEventListener("click",()=>{
+      pendingMilestonePct = parseInt(b.dataset.milestonePct);
+      app.querySelectorAll("[data-milestone-pct]").forEach(x=>x.classList.remove("selected"));
+      b.classList.add("selected");
+    }));
+    const mFile = document.getElementById("milestone-file");
+    if(mFile) mFile.addEventListener("change",(e)=>{
+      const file = e.target.files[0];
+      if(!file) return;
+      readImageThumb(file, 220, (dataUrl)=>{ pendingMilestoneThumb = dataUrl; showToast("Image attached"); });
+    });
+    const mSave = document.getElementById("milestone-save");
+    if(mSave) mSave.addEventListener("click",()=>{
+      const notesEl = document.getElementById("milestone-notes");
+      updateMilestone(modalState.projectId, modalState.milestoneId, {
+        percent: pendingMilestonePct,
+        notes: notesEl ? notesEl.value.trim() : "",
+        thumb: pendingMilestoneThumb
+      });
+      modalState = null;
+      render();
+      showToast("Milestone updated");
+    });
+  }
+}
+
+function finishReflect(skip){
+  const notesEl = document.getElementById("reflect-notes");
+  const notes = skip ? "" : (notesEl ? notesEl.value.trim() : "");
+  const perceived = skip ? null : pendingReflectDiff;
+  const levelUps = completeMission({
+    mission: modalState.mission,
+    mode: modalState.mode,
+    source: modalState.source,
+    extraUid: modalState.extraUid,
+    projectId: modalState.projectId,
+    milestoneId: modalState.milestoneId,
+    perceived, notes,
+    thumb: skip ? null : pendingThumb
+  });
+  modalState = null;
+  render();
+  if(levelUps.length){
+    showToast(`Level up — ${levelUps[0]}${levelUps.length>1?` +${levelUps.length-1} more`:""} ✦`);
+  } else {
+    showToast("Mission complete. That's the whole job today.");
+  }
+}
+
+/* ===================== BOOT ===================== */
+
+/* Detects browsing contexts where localStorage silently doesn't persist —
+   Safari Private Browsing, and (the common iPad case) opening this file
+   from within Mail/Files' built-in preview instead of a real Safari tab.
+   Store already fails safely in these cases; this just tells the person
+   why their progress might vanish, instead of leaving them to find out
+   the hard way after a day of missions. */
+function checkStorageOk(){
+  try{
+    const k = "__storage_test__";
+    window.localStorage.setItem(k, "1");
+    const ok = window.localStorage.getItem(k) === "1";
+    window.localStorage.removeItem(k);
+    return ok;
+  }catch(e){ return false; }
+}
+let storageOk = true;
+let storageWarningDismissed = false;
+
+function renderStorageBanner(){
+  if(storageOk || storageWarningDismissed) return "";
+  return `
+  <div class="storage-banner">
+    <span>Your progress may not be saved here — this looks like a preview window (e.g. Mail or Files), not a full Safari tab, or Private Browsing. Open this file directly in Safari, or use Share → Add to Home Screen, to keep your streak.</span>
+    <button id="dismiss-storage-warning">✕</button>
+  </div>`;
+}
+
+(async function boot(){
+  storageOk = checkStorageOk();
+  await loadState();
+  S.lastOpenDate = todayStr();
+  ensureDailyMission();
+  await saveState();
+  render();
+})();
+
+})();
+
+
+
+
+</script>
+</body>
+</html>
