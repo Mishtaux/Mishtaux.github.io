@@ -1834,6 +1834,12 @@ function startProject(templateId){
   if(S.projects.some(p=>p.templateId===templateId && !p.completedDate)) return null;
   const project = buildProjectBrief(templateId);
   S.projects.push(project);
+  // Today's slate is normally only decided once per day. Without this, a
+  // project started after today's general mission was already auto-generated
+  // would have no way to offer a project task until tomorrow's reset.
+  if(S.dailyMission && S.dailyMission.origin==="general" && S.dailyMission.status==="active"){
+    S.dailyMission = null;
+  }
   saveState();
   return project;
 }
@@ -2649,7 +2655,13 @@ function bindEvents(){
   }));
 
   app.querySelectorAll("[data-start-project]").forEach(b=>b.addEventListener("click",()=>{
-    startProject(b.dataset.startProject); render();
+    const project = startProject(b.dataset.startProject);
+    if(project){
+      S.view = "today";
+      saveState();
+      showToast("Project started. Pick today's task in Today.");
+    }
+    render();
   }));
 
   app.querySelectorAll("[data-milestone]").forEach(row=>row.addEventListener("click",()=>{
